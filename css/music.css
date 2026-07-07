@@ -1,0 +1,206 @@
+/*wrapper,title,sidebar and main-wrapper copied from the ever-so-talented vulpecula.neocities.org*/
+/*https://www.retrospace.net/download/WebApplications/WindowsXPDesignGuidelines/controls.htm - XP Style Guide*/
+* {
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+#big-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mainNav{
+  color: white;
+  font-weight: bold;
+  margin:auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mainNav ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.mainNav li{
+    color: white;
+  margin: 2pc;
+  margin-bottom: 1pc;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1;
+    font-size: 12px;
+    background: #1b1b1b;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 10% auto 10% auto;
+}
+
+.sidebar img {
+  
+}
+
+.sidebar-header {
+  display:flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: -3px;
+}
+
+.sidebar-header img{
+  padding: 5px;
+}
+
+.box {
+  border: 1px solid white;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.xpwindow {
+    border: 4px solid #245DDA;
+    border-top: 30px solid #245DDA;
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+    margin-top: -30px;
+    box-shadow: 2.5px 2.5px 5px black;
+    padding: 7px 10px;
+}
+
+.xpbutton {
+    display:flex;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: -1px -1px 1px lightgray inset;
+    min-width: 75px;
+    min-height: 23px;
+    color: black;
+}
+
+.xpwindow * {
+    color: black;
+}
+
+.weektitle {
+  font-weight:bold;
+  margin:3px;
+}
+
+iframe {
+    padding: 10px;
+}
+
+#big-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*.weeksong li{
+    justify-items: center;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size: 8pt;
+    font-weight: bold;
+    text-transform:uppercase;
+    list-style-type:none;
+    color:white;
+    background-color:red;
+}*/
+
+.weeksong a{
+  text-decoration:none;
+}
+
+.favalbums {
+  margin:auto;
+  display:flex;
+  justify-items: center;
+  text-align:center;
+}
+
+.favalbums h3{
+  margin:0;
+  padding-top:3px;
+}
+
+.pagegrid {
+    margin-top:10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 630px 150px;
+    grid-template-rows: auto;
+    align-items: flex-start;
+    justify-content:space-between;
+}
+
+.xpheader {
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    font-family: 'Tahoma';
+    text-align: left;
+}
+
+
+.xpheader h2 {
+    color: white;
+    margin:0;
+    margin-right:auto;
+    text-shadow: 1px 1px black;
+}
+
+.logentry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid white;
+  padding:10px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.logentry hr{
+  margin-top:0;
+}
+
+.loginfo {
+  text-align: left;
+  margin: 20px;
+}
+
+.logname {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logname p{
+  margin-top:5px;
+}
+
+.lograting {
+  margin:0;
+}

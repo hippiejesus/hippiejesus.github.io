@@ -1,0 +1,55 @@
+/*Recreation of Windows XP Luna theme*/
+.xpwindow {
+    color: black;
+    border: 4px solid #245DDA;
+    border-top: 30px solid #245DDA;
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+    margin-top: -30px;
+    box-shadow: 2.5px 2.5px 5px black;
+    padding: 7px 10px;
+    max-width: 600px;
+    a {color:black;}
+    a:hover {text-decoration: none;}
+}
+.xpheader {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 10px;
+    font-weight: bold;
+    h2 {
+        color: white;
+        margin: 0 auto 8px 0;
+        text-shadow: 1px 1px black;
+        font-family: 'Trebuchet MS';
+        align-content: flex-end;
+    }
+}
+.xptitlebuttons {
+    margin:6px 6px 3px 6px;
+    img:hover {filter:brightness(1.1);}
+    img:active {filter:brightness(0.7);}
+}
+.xpbutton {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #011a5d;
+    border-radius: 4px;
+    box-shadow: -1px -1px 1px lightgray inset;
+    min-width: 75px;
+    min-height: 23px;
+    color: black;
+
+}
+.xpbutton:hover {
+  box-shadow: 2px 2px orange inset, -2px -2px orange inset;
+}
+.xpbutton:active {
+  background-color: #dcd9d0;
+  box-shadow: 1px 1px 1px #cdc5b8 inset, -1px -1px 1px #f0efea inset;
+}

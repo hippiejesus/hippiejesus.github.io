@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" style="--header-height: 185px;">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="content-security-policy" content="">
+        <link rel="stylesheet" href="style.cs">
+        <title>RYAN CARAVEO</title>
+        <style>
+            /*Squarespace ahh page*/
+            body {
+                width: 100%;
+                background: black;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 69px 0;
+            }
+            .wrapper>div {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            .wrapper>div::before{
+                content:'';
+                display: block;
+                position:absolute;
+                left:0;
+                top:0;
+                width: 100%;
+                height: 100%;
+                opacity:0.5;
+                background-position:center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment:fixed;
+            }
+            header {
+                background: white;
+                position: fixed;
+                top:0;
+                width: 100%;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                z-index: 10;
+            }
+            nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            nav a{
+                flex-shrink: 0;
+                color: #212121;
+                text-decoration: 0;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 12pt;
+                margin: 1em 1.5em;
+            }
+            nav a:hover{
+                text-decoration: underline;
+            }
+            nav>a h1{
+                margin:0;
+                text-align: center;
+            }
+            .videobox {
+                background: black;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1em;
+                padding: 2em;
+                background-size: cover;
+                background-position: center;
+            }
+            .videobox>iframe {
+                flex-shrink: 0;
+                flex-grow: 0;
+            }
+            .carousel {
+                flex-shrink: 0;
+                width: 640px;
+                display: flex;
+                overflow-x: hidden;
+                scroll-snap-type: x mandatory;
+                overscroll-behavior-x: contain;
+                margin: 2em 1em;
+                z-index: 1;
+            }
+            .carousel iframe{
+                scroll-snap-align: start;
+            }
+            .carousel>iframe {
+                flex-shrink: 0;
+                flex-grow: 0;
+                width: 640px;
+                margin:0;
+                text-align: center;
+                align-content: center;
+            }
+            .videolist {
+                position: relative;
+                flex-shrink: 0;
+                width: 300px;
+            }
+            .videolist a{
+                color: white;
+                text-transform:uppercase;
+                text-decoration: none;
+                font-weight: bold;
+                list-style: none;
+                font-size: 14pt;
+                line-height: 1.5;
+            }
+            .videolist a:hover{
+                text-decoration: underline;
+            }
+            }
+            #forever-foggy::before{
+                background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/14/6b/55/146b55eb-4f01-71ee-484c-248e8293dfc4/859720484818_cover.jpg/1400x1400.png);
+            }
+            #trouble-in-paradise::before{
+                background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/16/c6/9e/16c69e3c-859f-25bd-b02c-ea319ea67c2b/859778540580_cover.jpg/1400x1400.png);
+            }
+            #album1::before {
+                background-image: url();
+            }
+            #northend-sweetheart::before {
+                background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/4e/45/924e4506-f484-7621-883a-2c489c2ad8d8/0842812147166_cover.jpg/1400x1400.png);
+            }
+            #butterfly-boy::before {
+                background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0a/11/9c/0a119c00-9360-6db2-4e82-06f950dac774/5054526609822_cover.jpg/1400x1400.png);
+            }
+            #at-least-i-tried::before {
+                background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3e/86/2c/3e862c27-c11c-db02-534e-4d31b5510415/859724770399_cover.jpg/3000x3000.png);
+            }
+            #at-least-i-tried>iframe {
+                box-shadow: 0 0 1em lightskyblue;
+            }
+            #maybe-they-were-wrong::before {
+                background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f5/a5/1f/f5a51fd4-e195-0c1a-6ef9-238bcfb59ff5/859718692607_cover.jpg/3000x3000.png);
+            }
+            #swings::before {
+                background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b2/ee/64/b2ee64be-bc03-20fa-0b3a-5d385f788085/859713795693_cover.jpg/3000x3000.png);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="video.html">Videos</a>
+                <a href="music/">Music</a>
+                <a href="#"><h1>RYAN CARAVEO</h1></a>
+                <a href="photos/">Photos</a>
+                <a href="shop.html">Shop</a>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <div id="forever-foggy">
+                <div class="carousel"> <!--Forever Foggy-->
+                    <iframe id="ff_its-not-real" width="640" height="360" src="https://www.youtube.com/embed/EF_qOVNooKY?si=pNm1dZX9ybsa39HF" title="It's Not Real (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="ff_how-to-dream" width="640" height="360" src="https://www.youtube.com/embed/Xuo2p7iVkTo?si=6nNt5vqwXJwWd2V3" title="How to Dream (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="ff_upupandaway" width="640" height="360" src="https://www.youtube.com/embed/CQQFv4T24D0?si=x3eRNnd6P7_4A1rI" title="Up up & Away (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <ol class="videolist">
+                    <a href="#ff_its-not-real"><li>It's Not Real</li></a>
+                    <a href="#ff_how-to-dream"><li>How To Dream</li></a>
+                    <a href="#ff_upupandaway"><li>Up up & Away</li></a>
+                </ol>
+            </div>
+            <div id="trouble-in-paradise">
+                <div class="carousel"> <!--Trouble In Paradise-->
+                    <iframe id="tip_raininbrisbane" width="640" height="360" src="https://www.youtube.com/embed/1-LVduumcbg?si=kKyPgDrjnLEcS0UU" title="Rain In Brisbane (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="tip_fromhellwithlove" width="640" height="360" src="https://www.youtube.com/embed/zhwiUgYucX4?si=Bx19ZhBunXvS2xc2" title="From Hell With Love (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="tip_cannonball" width="640" height="360" src="https://www.youtube.com/embed/l4tKU9ZbJ7E?si=SVrPyQ7w_67JT7hQ" title="Cannonball (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="tip_hatemenow" width="640" height="360" src="https://www.youtube.com/embed/pXMhexgIO1c?si=YjPurO06LFRN2i6k" title="Hate Me Now (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="tip_glacier" width="640" height="360" src="https://www.youtube.com/embed/EpFWVeryx84?si=iEQN_goDSD9qfXnb" title="Glacier (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="tip_onewingedairplane" width="640" height="360" src="https://www.youtube.com/embed/6koonFC38Vg?si=7utC5og5PBnDAJRr" title="One Winged Airplane (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="tip_pcbtm" width="640" height="360" src="https://www.youtube.com/embed/6Ud4WCyDPJ0?si=YrTVsyydHsNZctGe" title="Please Come Back To Me (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="tip_tip" width="640" height="360" src="https://www.youtube.com/embed/AS8zDRYKqDg?si=llXUBHXQbpwxyLFf" title="Trouble In Paradise (Official Lyric Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="tip_hopamine" width="640" height="360" src="https://www.youtube.com/embed/-Q_iXMDPOrM?si=dAo37oR2KtIwDQMV" title="Hopamine (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="tip_droppeddead" width="640" height="360" src="https://www.youtube.com/embed/jogcyM3bllE?si=EzWKqgtSbXLpMuMu" title="Dropped Dead (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="tip_froze" width="640" height="360" src="https://www.youtube.com/embed/_v626QACW8Y?si=iukhU__rdxqwnxu4" title="Froze (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <ol class="videolist">
+                    <a href="#tip_raininbrisbane"><li>Rain in Brisbane</li></a>
+                    <a href="#tip_fromhellwithlove"><li>From Hell With Love</li></a>
+                    <a href="#tip_cannonball"><li>Cannonball</li></a>
+                    <a href="#tip_hatemenow"><li>Hate Me Now</li></a>
+                    <a href="#tip_glacier"><li>Glacier</li></a>
+                    <a href="#tip_onewingedairplane"><li>One Winged Airplane</li></a>
+                    <a href="#tip_pcbtm"><li>Please Come Back To Me</li></a>
+                    <a href="#tip_tip"><li>Trouble In Paradise</li></a>
+                    <a href="#tip_hopamine"><li>Hopamine</li></a>
+                    <a href="#tip_droppeddead"><li>Dropped Dead</li></a>
+                    <a href="#tip_froze"><li>Froze</li></a>
+                </ol>
+            </div>
+            <div id="album1">
+                <div class="carousel">
+                    <iframe id="galaxies" width="640" height="360" src="https://www.youtube.com/embed/xikczrPm_1Q?si=onX8TBw0WdoonSEW" title="Galaxies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="gettochoose" width="640" height="360" src="https://www.youtube.com/embed/W6pObNmBgyY?si=fK9DWKv1gM2FLMKC" title="Get to Choose" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="permanentred" width="640" height="360" src="https://www.youtube.com/embed/ZNIjKZWN1sA?si=tr9dhVEm9EzUJr8O" title="Permanent Red" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                </div>
+                <ol class="videolist">
+                    <a href="#galaxies"><li>Galaxies</li></a>
+                    <a href="#gettochoose"><li>Get to Choose</li></a>
+                    <a href="#permanentred"><li>Permanent Red</li></a>
+                    <a href="#carolinareaper"><li>Carolina Reaper</li></a>
+                </ol>
+            </div>
+            <div id="northend-sweetheart">
+                <div class="carousel">
+                    <iframe id="ns_ricochet" width="640" height="360" src="https://www.youtube.com/embed/5XgHJZtONiQ?si=m2ObZLjBnWPkU-Un" title="Ricochet (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="ns_daisies" width="640" height="360" src="https://www.youtube.com/embed/DvdudihORJU?si=AwzNCq_tw8h-c1S-" title="Daisies (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="ns_nofun" width="640" height="360" src="https://www.youtube.com/embed/mWURkDpr2jg?si=ONoU1RSejie6Aw4k" title="No Fun (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="ns_superstar" width="640" height="360" src="https://www.youtube.com/embed/qw_y5AqhBUk?si=ORUahazzaF2RRTwF" title="Superstar (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="ns_holly" width="640" height="360" src="https://www.youtube.com/embed/HVVtgKDtUMs?si=l-adFJnZ-bY2yEii" title="Holly (Official Lyric Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <ol class="videolist">
+                    <a href="#ns_ricochet"><li>Ricochet</li></a>
+                    <a href="#ns_daisies"><li>Daisies</li></a>
+                    <a href="#ns_nofun"><li>No Fun</li></a>
+                    <a href="#ns_superstar"><li>Superstar</li></a>
+                    <a href="#ns_holly"><li>Holly</li></a>
+                </ol>
+            </div>
+            <div id="butterfly-boy">
+                <div class="carousel">
+                    <iframe id="bb_deceived" width="640" height="360" src="https://www.youtube.com/embed/ZjiScsHUApo?si=rVE_wU7qPxrN0Ryw" title="Deceived (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="bb_pbw" width="640" height="360" src="https://www.youtube.com/embed/g99MyUfpDxo?si=anwLP3MNH5ngvP03" title="Peanut Butter Waffles (Official Lyric Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="bb_murda" width="640" height="360" src="https://www.youtube.com/embed/KEkmro3cE6Y?si=k95ZjFXl_SxdfXHG" title="Murda (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="bb_thrivin" width="640" height="360" src="https://www.youtube.com/embed/_PzwV-_GaRA?si=1FaLR4xb4iZpxxN3" title="Thrivin (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="bb_run" width="640" height="360" src="https://www.youtube.com/embed/d32ZZEmSUQ0?si=KoN7EFGMs34syhwr" title="Run (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <ol class="videolist">
+                    <a href="#bb_deceived"><li>Deceived</li></a>
+                    <a href="#bb_pbw"><li>Peanut Butter Waffles</li></a>
+                    <a href="#bb_murda"><li>Murda</li></a>
+                    <a href="#bb_thrivin"><li>Thrivin</li></a>
+                    <a href="#bb_run"><li>Run</li></a>
+                </ol>
+            </div>
+            <div id="at-least-i-tried">
+                <div class="carousel" style="box-shadow:0 0 20px lightcyan">
+                    <iframe id="alit_pumpkinpie" width="640" height="360" src="https://www.youtube.com/embed/xDnq58XPpEc?si=BOfMF3sTJVo9LSi_" title="Pumpkin Pie (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="alit_inmyownskin" width="640" height="360" src="https://www.youtube.com/embed/eR04-jtCvZU?si=wPw7yBXIRe_BouDC" title="In My Own Skin (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="alit_bang" width="640" height="360" src="https://www.youtube.com/embed/hNOceS9J4Tw?si=H6FGWyZfN1p2Ylfh" title="Bang (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="alit_ghost" width="640" height="360" src="https://www.youtube.com/embed/jEfY53v4fjk?si=2ebiwHqs6pXnyD5v" title="Ghost (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <ol class="videolist">
+                    <a href="#alit_pumpkinpie"><li>Pumpkin Pie</li></a>
+                    <a href="#alit_inmyownskin"><li>In My Own Skin</li></a>
+                    <a href="#alit_bang"><li>Bang</li></a>
+                    <a href="#alit_ghost"><li>Ghost</li></a>
+                </ol>
+            </div>
+            <div id="maybe-they-were-wrong">
+                <div class="carousel" id="maybe-they-were-wrong">
+                    <iframe id="mtww_lwotp" allowfullscreen src="https://www.vidlii.com/embed?v=E5zcnqR-C-2&a=0" title="Like We Own This Place" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="mtww_grimreaper" width="640" height="360" src="https://www.youtube.com/embed/rTQWdHpN3Mo?si=tVuAxdr0fz5FvChr" title="Grim Reaper (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="mtww_mygrave" allowfullscreen src="https://www.vidlii.com/embed?v=CX7NeWtGSjF&a=0" title="My Grave" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="mtww_realrightnow" width="640" height="360" src="https://www.youtube.com/embed/GsxNdkRbREY?si=X3qFENaPVlA-Qoni" title="Real Right Now (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <ol class="videolist">
+                    <a href="#mtww_lwotp"><li>Like We Own This Place</li></a>
+                    <a href="#mtww_grimreaper"><li>Grim Reaper</li></a>
+                    <a href="#mtww_mygrave"><li>My Grave</li></a>
+                    <a href="#mtww_realrightnow"><li>Real Right Now</li></a>
+                </ol>
+            </div>
+            <div id="happy-now">
+                <div class="carousel">
+                    <iframe id="happynow_floating" allowfullscreen src="https://www.vidlii.com/embed?v=0w7OBMkYjn7&a=0" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="happynow_eat" allowfullscreen src="https://www.vidlii.com/embed?v=dz9LUowadXS&a=0" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="happynow_jealousy" width="640" height="360" src="https://www.youtube.com/embed/b0qeCDIxW0Q?si=79oaab9D5u6KIYtj" title="Jealousy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <ol class="videolist">
+                    <a href="#happynow_floating"><li>Floating</li></a>
+                    <a href="#happynow_eat"><li>Eat</li></a>
+                    <a href="#happynow_jealousy"><li>Jealousy</li></a>
+                </ol>
+            </div>
+            <div id="swings">  
+                <div class="carousel">
+                    <iframe id="swings_schlager" allowfullscreen src="https://www.vidlii.com/embed?v=7maKlwR-3wy&a=0" title="Schlager" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="swings_wallowing" allowfullscreen src="https://www.vidlii.com/embed?v=zgdzT8bh6ZF&a=0" title="Wallowing" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="swings_justcanthang" allowfullscreen src="https://www.vidlii.com/embed?v=QqlPovkmkF7&a=0" title="Just Can't Hang" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="swings_wtss" allowfullscreen src="https://www.vidlii.com/embed?v=9sU7mqwwjqj&a=0" title="Where The Sun Sets" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="swings_betty" allowfullscreen src="https://www.vidlii.com/embed?v=JyzE6itbpTk&a=0" title="Betty" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="swings_godmode" allowfullscreen src="https://www.vidlii.com/embed?v=-jw5Bg2Jkw_&a=0" title="GODMODE" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="swings_paradise" width="640" height="360" src="https://www.youtube.com/embed/5FzFyAQzE44?si=2jdMrmn7X1NM6A9p" title="Paradise (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <ol class="videolist">
+                    <a href="#swings_schlager"><li>Schlager</li></a>
+                    <a href="#swings_wallowing"><li>Wallowing</li></a>
+                    <a href="#swings_justcanthang"><li>Just Can't Hang</li></a>
+                    <a href="#swings_wtss"><li>Where The Sun Sets</li></a>
+                    <a href="#swings_betty"><li>Betty</li></a>
+                    <a href="#swings_godmode"><li>GODMODE</li></a>
+                    <a href="#swings_paradise"><li>Paradise</li></a>
+                </ol>
+            </div>
+            <div id="singles1">  
+                <div class="carousel">
+                    <iframe id="rogerthat" allowfullscreen src="https://www.vidlii.com/embed?v=Lu4_YZOwykd&a=0" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="infinite" allowfullscreen src="https://www.vidlii.com/embed?v=eR-jgsl5qHd&a=0" frameborder="0" width="640" height="360"></iframe>
+                    <iframe id="mightmurderme" allowfullscreen src="https://www.vidlii.com/embed?v=IdpWOX6rWNM&a=0" frameborder="0" width="640" height="360"></iframe>
+                </div>
+                <ol class="videolist">
+                    <a href="#rogerthat"><li>Roger That</li></a>
+                    <a href="#infinite"><li>Infinite</li></a>
+                    <a href="#mightmurderme"><li>Might Murder Me</li></a>
+                </ol>
+            </div>
+            <div id="misc">  
+                <div class="videobox">
+                    <iframe id="misso" width="640" height="360" src="https://www.youtube.com/embed/wl-wd0NWE5w?si=9JQkqzINQ3R2U7Gk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="blackroses" width="640" height="360" src="https://www.youtube.com/embed/ylmsIGMSXJ0?si=P-atjlH-xweYVMyf" title="Black Roses Release" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="2014sermoninterview" width="640" height="360" src="https://www.youtube.com/embed/15cvPtBnge8?si=fleq5NQa-NsMmjRb" title="2014 - The Sermon's Domain Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="swingsreleaseshow" width="640" height="360" src="https://www.youtube.com/embed/ZnWnomTDOck?si=c-zA-HmDW308yrT_" title="Swings Release Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="7slapsep" width="640" height="360" src="https://www.youtube.com/embed/walJIU9CHNk?si=AjnXiEnCpRVTXKDo" title="7 Slaps In The Sack" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="#frontrowliveint" width="640" height="360" src="https://www.youtube.com/embed/GxXwpeBIcu0?si=D-_9nFCPxXk4j21Y" title="2019 - Front Row Live Ent. Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

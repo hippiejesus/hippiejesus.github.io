@@ -1,0 +1,110 @@
+html,body{
+    width:100%;
+}
+body {
+    margin: 0;
+    background: #212121;
+}
+a {
+    text-decoration: none;
+}
+.wrapper {
+    display: flex;
+    font-family: "Lucida Sans Unicode","Lucida Grande","sans-serif";
+}
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    width: 240px;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-transform:uppercase;
+    background: #fff;
+}
+.content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: "proxima-nova",Helvetica,Arial,sans-serif;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: 240px;
+    padding: 65px;
+}
+nav ul{
+    font-size: 1em;
+    font-weight: 400;
+    list-style: none;
+    padding: 0 40px;
+    line-height: 1.75em;
+    letter-spacing: 3px;
+}
+nav>ul a{
+    color: #242628;
+    text-decoration: none;
+    transition: 200ms ease-in-out;
+}
+nav>ul a:hover{
+    color: aqua;
+}
+a {text-decoration: none;}
+#siteHeader {
+    margin:0 40px 25px;
+    line-height: 1.25em;
+    letter-spacing: 0.2em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #242628;
+}
+.socialsNav {
+    padding: 25px 40px 0;
+}
+.socialsNav svg{
+    height: 9px;
+    width: 9px;
+    transition: fill 150ms ease;
+    fill: white;
+}
+.socialsNav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background: rgba(17,17,17,.75);
+}
+.socialsNav a:hover{
+    background: #212121;
+}
+.watermark {
+    position:fixed;
+    z-index: -1;
+    bottom: -10%;
+    left:40%;
+    opacity:5%;
+    transform:rotate(6deg);
+}
+.video-grid{
+    width:640px;
+    padding:0 17px;
+}
+.video-grid iframe{
+    padding:17px 0;
+}
+p {
+    font-family: "Lucida Sans Unicode","Lucida Grande","sans-serif";
+    font-size: 16px;
+    line-height: 1.75em;
+    text-transform: none;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+}

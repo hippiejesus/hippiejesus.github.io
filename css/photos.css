@@ -1,0 +1,204 @@
+/*wrapper,title,sidebar and main-wrapper copied from the ever-so-talented vulpecula.neocities.org*/
+
+* {
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  color: white;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.main-wrapper {
+  margin-right: 170px; /*Pushes the div from the right so it doesn't cover the sidebar*/
+  position: relative; /*Enabled or disabled, didn't make a difference*/
+}
+
+.header {
+  /*background-image: url(/images/coding.jpg);*/
+  /*image-rendering: pixelated;*/
+  background-size: 100%; /*Fills whole space with image, no tiling or underscan*/
+  /*background-position-x: 0;*/ /*Moves image left or right*/
+  /*background-position-y: 0;*/ /*Moves image up or down*/
+  height: 180px;
+  margin-bottom: -10px; /*not sure what it does, so I left it off for now*/
+  border-color: white;
+  border-width: 1px;
+}
+
+.headertxt {
+    text-align: center;
+    margin-top: 2pc;
+}
+.sidebar-img, .footer, .title, .links, .box {
+  margin-top: 10px;
+}
+
+.sidebar {
+  width: 150px;
+  /*margin-top: 200px;*/
+  float: right;
+  position: relative;
+}
+
+.box {
+  border: 1px solid white;
+  padding-top: 0.5em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+}
+
+.albumbox {
+    border: 1px solid white;
+    padding-top: 0.5em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    text-align: center;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1;
+    font-size: 12px;
+    background: #1b1b1b;
+}
+
+
+.mainNav a{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.mainNav a:hover{
+  text-decoration: none;
+}
+
+.mainNav ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.mainNav li{
+  margin: 2pc;
+  margin-bottom: 1pc;
+}
+
+#big-logo {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.gallery {
+  /*background-image: url('images/gallery-background.png');*/
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center 0;
+
+}
+
+.album {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.album img{
+    max-width:350px;
+    margin:1pc;
+}
+
+.highlight {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.highlight img{
+  max-width: 800px;
+}
+
+h3 {
+    text-align: center;
+    font-size:14pt;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+.albumbox ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+    list-style-position: inside;
+    line-height: 1.5;
+    padding: 0;
+}
+
+.albumbox li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    font-size: 14pt;
+    font-weight: bold;
+    color:white;
+    border: 2px solid white;
+    background-color:black;
+    background-size:cover;
+    width: 250px;
+    height: 200px;
+}
+
+.albumbox li:hover{
+  box-shadow: inset 10px 10px 20px black;
+}
+
+.albumbox small{
+  font-weight:lighter;
+}
+
+.albumbox img{
+  opacity: 30%;
+}
+
+.albumbox a {
+    text-decoration: none;
+    color:black;
+    text-shadow: 1px 1px 2px black;
+}
+
+.albumbox a:hover {
+  text-shadow: 3px 2px 5px black;
+}

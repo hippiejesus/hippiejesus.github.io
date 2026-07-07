@@ -1,0 +1,524 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* USHER - Universal Site Header, Easily Repeatable */
+header {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 4em;
+}
+
+#big-logo img{
+  width: 500px;
+  transition: 200ms ease;
+}
+
+#big-logo img:hover{
+  scale:101%;
+  filter:drop-shadow(0 2px 10px black);
+}
+
+#big-logo img:active{
+  scale: 99%;
+  filter:none;
+  transition: 0ms;
+}
+
+header hr{
+  color: white;
+  width: 100%;
+  margin: auto;
+}
+
+.mainNav{
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.mainNav ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.mainNav li{
+  margin: 2pc;
+  margin-bottom: 1pc;
+  transition: 100ms;
+}
+
+.mainNav li:hover{
+  scale: 150%;
+}
+
+.mainNav a{
+  color: white;
+  text-decoration: none;
+}
+
+/* Common elements */
+body {
+  color: white;
+  font-family: sans-serif;
+  line-height: 1;
+  font-size: 12px;
+  background-image: 
+    url("../images/sitelogo-full.png"),
+    radial-gradient(circle, rgba(255, 125, 125, 1) 7%, rgba(168, 0, 33, 1) 47%, rgba(79, 3, 3, 1) 100%);
+  background-repeat: repeat, no-repeat;
+  background-position: top left, center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.box {
+  border: 1px solid white;
+  box-shadow: 0 0 3px white;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+}
+
+.headertxt {
+  display:flex;
+  justify-content:left;
+  align-items: center;
+  padding: 0;
+  text-shadow: 0 0 4px gray;
+}
+
+h1, h2, h3, h4, h5 {
+  display:flex;
+  justify-content:left;
+  align-items: center;
+  padding: 0;
+  text-shadow: 0 0 4px gray;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 1.5em auto 0 0;
+}
+
+hr {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#totop-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+}
+
+/* Universal page wrapper*/
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em 3em;
+  box-shadow: 0 0 20px black;
+  background-color: #2b2b2b;
+}
+
+/* Landing page */
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons img {
+  margin: 2px;
+}
+
+.buttons img:hover {
+  scale: 110%;
+  transform:rotate(2deg);
+}
+
+/*Nav button layout inspired by 90's Space Jam website*/
+.new-nav-buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-nav-buttons img{
+  width: 128px;
+  padding: 2em;
+}
+
+.new-nav-buttons  img:hover{
+  opacity: 50%;
+}
+
+.new-nav-buttons::before{
+  content: attr(butt-name);
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 20pt;
+  font-weight: bolder;
+  scale: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index:1;
+}
+
+.new-nav-buttons:hover::before {
+  color: white;
+  text-shadow: 0 0 5px black;
+  scale:1;
+  opacity:1;
+}
+
+/* Page layout w/ sidebar - inspired by the vulpecula.neocities.org */
+.pagegrid {
+    margin-top:10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 630px 150px;
+    grid-template-rows: auto;
+    align-items: flex-start;
+    justify-content:space-between;
+}
+
+.headertxt-w-icon {
+  display:flex;
+  justify-content:left;
+  align-items: center;
+  padding: 0;
+  margin: 1.5em auto 0 -3px;
+  text-shadow: 0 0 4px gray;
+}
+
+.headertxt-w-icon h3 {
+  margin: 0;
+}
+
+.headertxt-w-icon img{
+  width: 16px;
+  padding: 5px;
+}
+
+/* About */
+#monstercans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#monstercans img{
+  width: 50px;
+}
+
+/* Gallery */
+#galleryindex {
+  /*background-image: url('images/gallery-background.png');*/
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center 0;
+
+}
+
+.album {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.album img{
+    max-width:350px;
+    margin:1pc;
+}
+
+/* Music */
+.favalbums {
+  margin: auto;
+  display: flex;
+  justify-items: center;
+  text-align: center;
+}
+
+.favalbums h3{margin:0;padding-top:3px;}
+
+.weektitle {font-weight:bold;margin:3px;}
+
+.weeksong li{
+    justify-items: center;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size: 8pt;
+    font-weight: bold;
+    text-transform:uppercase;
+    list-style-type:none;
+    color:white;
+    background-color:red;
+}
+
+.weeksong a{text-decoration:none;}
+
+.logentry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid white;
+  padding:10px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.logentry hr{margin-top:0;}
+
+.loginfo {text-align: left;margin: 20px;}
+
+.logname {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logname p{margin-top:5px;}
+
+.lograting {margin:0;}
+
+/* Videos */
+.video-grid {
+    width: 110%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2em 0 2em -5%;
+}
+
+.video-grid iframe {padding: 0.5em;}
+
+/* Blog */
+
+#index {width: 250px;margin: auto;}
+
+#index h2 {margin: 0;}
+
+#index h3 {
+    font-size: large;
+    margin: 3px 6px;
+}
+
+#index a{text-decoration: none;}
+
+#index ul {
+    line-height: 1.5;
+    list-style-type: none;
+    padding:0;
+}
+
+#index li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    border-radius: 4px;
+    margin:0;
+    padding:0;
+}
+
+#index li::before{
+    content: '';
+    height: 16px;
+    width: 16px;
+    margin: 3px 6px 3px 6px;
+    background-image: url(../../assets/images/icons/xptxtdoc.ico);
+    background-size: cover;
+    position: absolute;
+    left: 0;
+}
+
+#index li:hover {background-color:lightgray;}
+
+#index li img {width: 16px;margin: 3px 6px 3px 6px;}
+
+#index p{position: relative;margin: 3px auto 3px 28px;}
+
+#index .month {margin:12px 0;}
+
+.blogentry {margin-top:2em;}
+
+.blogphotoleft {
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left:auto;
+    margin-top:-20px;
+}
+
+.blogphotoright {
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-left:auto;
+    margin-top:-20px;
+}
+
+.blogphotoleft img{
+    border: 10px solid white;
+    box-shadow: 3px 3px 5px black;
+}
+
+.blogphotoright img{
+    border: 10px solid white;
+    box-shadow: 3px 3px 5px black;
+}
+
+/* Luna Theme */
+
+.xpwindow {
+    color: black;
+    border: 4px solid #245DDA;
+    border-top: 30px solid #245DDA;
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+    margin-top: -30px;
+    box-shadow: 2.5px 2.5px 5px black;
+    padding: 7px 10px;
+    max-width: 600px;
+}
+
+.xpwindow a{color:black;}
+.xpwindow a:hover{text-decoration: none;}
+
+.xpheader {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.xpheader h2 {
+    color: white;
+    margin: 0 auto 8px 0;
+    text-shadow: 1px 1px black;
+    font-family: 'Trebuchet MS';
+    align-content: flex-end;
+}
+
+.xptitlebuttons {margin:6px 6px 3px 6px;}
+.xptitlebuttons>img:hover {filter:brightness(1.1);}
+.xptitlebuttons>img:active {filter:brightness(0.8);}
+
+.xpbutton {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #011a5d;
+    border-radius: 4px;
+    box-shadow: -1px -1px 1px lightgray inset;
+    min-width: 75px;
+    min-height: 23px;
+    color: black;
+}
+
+.xpbutton:hover {
+  box-shadow: 2px 2px orange inset, -2px -2px orange inset;
+}
+
+.xpbutton:active {
+  background-color: #dcd9d0;
+  box-shadow: 1px 1px 1px #cdc5b8 inset, -1px -1px 1px #f0efea inset;
+}
+
+/* Animations */
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+/* Deprecated */
+/* --- Nav Button HTML and CSS taken from Wade of DankPods fame, dingusland.fun */
+.nav-buttons {
+    display:table;
+    width:160px;
+    height:80px;
+    background-color:#ffffffe6;
+    border-style:solid;
+    margin:6px;
+    border-width:2.5px;
+    border-color:#a0a0a0;
+    border-right-width:0;
+    border-bottom-width:0;
+    box-shadow:-2.5px -2.5px #f0f0f0,2.5px -2.5px #f0f0f0,-2.5px 2.5px #f0f0f0,2.5px 2.5px #f0f0f0,-2.5px 5px #a0a0a0,5px -2.5px #a0a0a0,5px 5px #a0a0a0;
+    position:relative;
+}
+
+.nav-buttons a{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:10;
+  background-color:#fff;
+  opacity:0;
+  filter:alpha(opacity=1);
+}
+
+.nav-buttons .text {
+    color: black;
+    display:table-cell;
+    height:100%;
+    vertical-align:bottom;
+    font-size:1rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding-left:5px
+}
+
+.nav-buttons img{
+    height:64px;
+    float:right;
+    display:table-cell;
+    padding-right:3px;
+    padding-top:3px
+}
+
+#navbuttonwrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 30px;
+}

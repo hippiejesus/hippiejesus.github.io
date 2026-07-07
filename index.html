@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" style="--header-height: 185px;">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="assets/images/favicons/64x64.png">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="content-security-policy" content="">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>hippiejesus</title>
+        <style>
+            .navtable::before{
+                /*Spinning sun ray graphic*/
+                content: '';
+                position: absolute;
+                left:0;
+                right:0;
+                width: 100%;
+                height: 100%;
+                scale: 125%;
+                z-index: 0;
+                background-image: url("assets/images/rays.png");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: 40%;
+                animation-name: spin;
+                animation-duration: 50s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                pointer-events: none;
+            }
+            #landing-logo img {
+                width: 500px;
+                margin-top:0;
+                transition: 100ms ease;
+            }
+            #landing-logo img:hover {
+                scale: 1.1;
+            }
+            #landing-logo img:active {
+                scale: 1.05;
+                transition: 0ms;
+                filter:brightness(0.9)
+            }
+            #siteIcons {
+                display:grid;
+                grid-auto-columns: 200px;
+                grid-auto-flow: column;
+                margin:3em;
+                justify-content: center;
+                justify-items: center;
+                align-items: center;
+                gap:3em;}
+            #siteIcons img:active {opacity:0.6;}
+            .headertxt {margin:auto;text-align:center;}
+            #indexfooter {display:flex;justify-content:center;}
+            .changelogentry {margin:1em auto;width:500px;display:flex;justify-content:space-between;align-items:center;}
+            .screenshot img {width:100px;border:3px solid white;box-shadow:1px 1px 3px black;}
+            .screenshot img:hover {scale:300%;box-shadow:0 3px 5px black;}
+            #bumperStickers {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                div {
+                  position: absolute;
+                  display: flex;
+                  justify-content: center;
+                  top: 68%;
+                }
+            }
+            .buttons {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                margin: auto;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                justify-content: center;
+                align-items: center;
+                img, div{
+                  margin: 2px;
+                  height: 31px;
+                  width: 88px;
+                }
+                img:hover, div:hover{
+                  scale: 110%;
+                  transform:rotate(2deg); 
+                  cursor: alias;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper" style="margin:0 auto; padding: 2em;">
+            <span>
+                <table style="margin:auto auto 2em;padding:0;position:relative;">
+                    <tbody class="navtable">
+                        <tr>
+                            <td colspan="2" align="right" valign="bottom"> <!--About-->
+                                <div class="new-nav-buttons" butt-name="ABOUT">
+                                    <a href="about.html">
+                                        <img src="assets/images/icons/hq/help.png" alt="Quietion Mark Icon">
+                                    </a>
+                                </div>
+                            </td>
+                            <td colspan="2" align="center" valign="top"> <!--Gallery-->
+                                <div class="new-nav-buttons" butt-name="GALLERY" style="margin-bottom:4em;">
+                                    <a href="photos/">
+                                        <img src="assets/images/icons/hq/digicam.png" alt="Digital Camera">
+                                    </a>
+                                </div>
+                            </td>
+                            <td colspan="2" align="left" valign="bottom"> <!--Videos-->
+                                <div class="new-nav-buttons" butt-name="VIDEOS">
+                                    <a href="videos.html">
+                                        <img src="assets/images/icons/hq/camcorder.png" alt="Camcorder">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" align="center" valign="middle"> <!--Logo-->
+                                <div id="landing-logo">
+                                    <!--Shoutout to tabf5 for the tabling homie!-->
+                                    <img src="assets/images/143.png" style="width:50px;position:absolute;right:250px;top:37%;transform:rotate(10deg);">
+                                    <img src="assets/images/site-title.svg" style="filter: drop-shadow(0 0 3px #e9a45a);">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="top"> <!--Music-->
+                                <div class="new-nav-buttons" butt-name="MEDIA">
+                                    <a href="media/">
+                                        <img src="assets/images/icons/hq/cd.png" alt="Audio CD">
+                                    </a>
+                                </div>
+                            </td>
+                            <td colspan="2" align="center" valign="bottom"> <!--Collection-->
+                                <div class="new-nav-buttons" butt-name="COLLECTION" style="margin-top:5em;">
+                                    <a href="collection/">
+                                        <img src="assets/images/icons/hq/cabinet.png" alt="Filing Cabinet">
+                                    </a>
+                                </div>
+                            </td>
+                            <td colspan="2" align="center" valign="bottom"> <!--Blog-->
+                                <div class="new-nav-buttons" butt-name="BLOG" style="margin-top:5em;">
+                                    <a href="blog/">
+                                        <img src="assets/images/icons/hq/mydocs.png" alt="Documents Folder">
+                                    </a>
+                                </div>
+                            </td>
+                            <td align="center" valign="top"> <!--Guestbook-->
+                                <div class="new-nav-buttons" butt-name="GUESTBOOK">
+                                    <a href="https://hippiejesus.atabook.org/" style="cursor:alias;">
+                                        <img src="assets/images/icons/hq/controlpanel.png" alt="Checkmark">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+            <div><hr></div>
+            <span>
+                <div class="buttons">
+                    <!--Hello, neighbors! I'm sorry if I've missed you. I'll have to give my contact info soon for problems like this.-->
+                    <a href="https://greenbox.network/"><img title="" src="https://greenbox.network/images/8831/current.png"></a>
+                    <a href="https://xyllria.neocities.org" target="_blank"><img title="Xyl, of Xyllrium" src="https://xyllria.neocities.org/buttonxylcube.gif" alt="Xyl"></a>
+                    <a href="https://web.archive.org/web/20260330011229/https://error-666.neocities.org/" target="_blank"><img title="Error 666" src="assets/images/buttons/error666.gif" alt="Error 666"></a>
+                    <a href="https://sunnysvideo.neocities.org/"><img title="Sunny's Video Store" src="https://sunnysvideo.neocities.org/images/graphics/Sunnys_Video_Website_Button.gif" alt="Sunny's Video"></a>
+                    <a href="https://killdozer.online/" target="_blank" style="width:88px;text-align:center;"><img src="https://killdozer.online/buttons/KILLDOZER.png" alt="KILLDOZER"></a>
+                    <a href="https://tabf5.com/" target="_blank"><img src="https://tabf5.com/img/button.gif" alt="TabF5.com" style="image-rendering: pixelated;"></a>
+                    <a href="https://xiokka.neocities.org/" target="_blank"><img src="https://xiokka.neocities.org/buttons/my_buttons/button4.png" alt="Xiokka"></a>
+                    <a href="https://skigo.site/"><img src="https://skigo.site/pics/skigosite88x31.png" alt="skigosite"></a>
+                    <a href="https://animeman.us/" target="_blank"><img src="assets/images/buttons/_gojo_button_blue.png" alt="JAAM"></a>
+                    <a href="https://millennium-whoop.github.io/aetherway/" target="_blank"><img src="https://millennium-whoop.github.io/aetherway/buttons/88x31_01.gif" alt="Aetherway"></a>
+                    <a href="https://spacefungus.tv/" target="_blank"><img src="assets/images/buttons/station-butt.gif" alt="The Space Station"></a>
+                    <a href="https://hippiejesus.net/archive/ladyinbed/about/" target="_blank"><img src="assets/images/buttons/ladyinbed_button.gif" alt="Lady In Bed" style="cursor:pointer;"></a>
+                    <a href="https://rusty-bytes.neocities.org/" target="_blank"><img src="assets/images/buttons/mybutton.png" alt="Rusty Bytes"></a>
+                    <div style="height: 31px; width: 88px;"><a style="background-color: transparent; color: black; text-decoration: none;" href="https://dir.emptiness.io"  target="_blank"><div style="position: relative; background-color: #e7fa19; font-color: black; font-family: 'Verdana'; font-size: 10px; height: 31px; width: 88px; overflow: hidden; border: 1px black; margin: 0 0 0 0; padding: 0 0 0 0;"><span style="width: 31px; height: 88px; position: absolute; transform: rotate(-90deg) translatey(-88px); transform-origin: top right; display: flex; justify-content: flex-end; font-size: 2px; font-family: monospace; overflow-wrap: anywhere; top: 0; right: 0;">this is an 88x31 button made entirely out of text because that is the theme of the website. i am human. we are human. fuck the algorithm. take back the web. this is an 88x31 button made entirely out of text because that is the theme of the website. i am human. we are human. fuck the algorithm. take back the web. this is an 88x31 button made entirely out of text because that is the theme of the website.</span><span style="position: absolute; font-size: 4px; top: 3 px; left: 48px;">&#9654;&#9654;&#9654;&#9654;&#9654;</span><span style="background-color: black; height: 3px; width: 44px; position: absolute; top: 5px; left: 0;"></span><span style="background-color: black; width: 5px; height: 31px; position: absolute; top: 0; right: 5px;"></span><span style="background-color: black; color: #e7fa19; position: absolute; right: 0; bottom: 5px; z-index: 3;">$DIR&gt;EMPTINESS</span></div></a></div>
+                    <a href="https://phailsnail.neocities.org" target="_blank"><img src="assets/images/buttons/PhailSnail.png" alt="PhailSnail"></a>
+                    <a href="https://liquidcult.neocities.org" target="_blank"><img src="assets/images/buttons/liquidcultbanner.gif" alt="Liquid Cult"></a>
+                    <a href="https://vermi1ion.neocities.org" target="_blank" title="vermilion" alt="vermilion"><img src="https://vermi1ion.neocities.org/assets/v_white.gif" width="88px"></a>
+                    <a href="https://madville.neocities.org/" target="_blank"><img src="assets/images/buttons/madville.gif" alt="Madville"></a>
+                    <a href="https://jello01000101.neocities.org/" target="_blank"><img src="https://file.garden/Z7xIJSbOXhtckiPg/alienjello.gif"></a> 
+                    <a href="https://bulltown.neocities.org/" target="_blank"><img src="assets/images/buttons/newb.png" alt="bulltown.neo"></a>
+                    <a href="https://whatmeworry.neocities.org/" target="_blank"><img src="assets/images/buttons/whatmeworry.png" alt="What, Me Worry?"></a>
+                    <a href="https://pacrobat.com/" target="_blank"><img src="assets/images/buttons/pacrobutton.gif" alt="PACROBAT!!"></a>
+                    <a href="https://noxid-kin.neocities.org/" target="_blank"><img src="assets/images/buttons/NoxidButton.gif" alt="Noxid's Space"></a>
+                    <a href="https://retro-haven.neocities.org/" target="_blank"><img src="assets/images/buttons/retrohaven.gif" alt="Retro Haven"></a>
+                    <a href="https://kid-koda.neocities.org/" target="_blank"><img src="assets/images/buttons/thebulletin.gif" alt="The Bulletin"></a>
+                    <a href="https://ughbees.neocities.org/"><img src="assets/images/buttons/ughbeesbutton4.png" alt="Ughbees"></a>
+                    <a href="https://infi-power.neocities.org"><img src="assets/images/buttons/infipower-gold.png" alt="infi-power"></a>
+                    <a href="https://saltedslug.neocities.org"><img src="assets/images/buttons/slug_btn02.png" alt="Salty's Lair"></a>
+                    <a href="https://datoxicwaltz.neocities.org" target="_blank"><img src="https://files.catbox.moe/odo8i4.gif" width="88px" height="31px" alt="datoxicwaltz"></a>
+                    
+                </div>
+                <div style="margin-bottom:3em;"><hr></div>
+            </span>
+            <div id="siteIcons">
+                <span><a href="https://hinokodo.itch.io/human-made" style="cursor:alias;"><img src="/assets/images/icons/humanmade.png" width="200px"></a></span>
+                <span><a href="https://neocities.org/site/hippiejesus" style="cursor:alias;"><img src="assets/images/icons/neocitiesbadge.webp" width="200px"></a></span>
+            </div>
+            <div id="bumperStickers" style="margin:auto;justify-content:center;">
+                <img src="assets/images/corollass.png" width="600px">
+                <div>
+                    <img src="assets/images/buttons/bestonpc.gif">
+                    <img src="assets/images/buttons/html.gif">
+                    <img src="assets/images/buttons/mwcss.gif">
+                    <img src="assets/images/buttons/madewithvsc.png">
+                    <a href="https://petrapixel.neocities.org/about/blinkies" style="cursor:alias;"><img src="assets/images/buttons/created-by-a-human.png"></a>
+                    <a href="https://ifixit.com/" style="cursor:alias;"><img src="assets/images/buttons/righttorepair.png"></a>
+                </div>
+            </div>
+            <div id="indexfooter">
+                <div style="display:flex;flex-direction:column;">
+                    <h2 class="headertxt">Change Log</h2>
+                    <hr width="200px">
+                    <div class="box changelogentry" id="20260618">
+                        <span>
+                            <h3>June 18, 2026</h3>
+                            <ul>
+                                <li>Added "Bonnaroo" and "Groove & Sunshine Festival" posters to Media page. Gallery pages coming soon.</li>
+                                <li>Added songs to featured section on Media page.</li>
+                                <li>Added movie entry to media log.</li>
+                                <li>Added "infi-power", "Salty's Lair" and "datoxicwaltz" buttons to neighbors list. <3</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260602">
+                        <span>
+                            <h3>June 2, 2026</h3>
+                            <ul>
+                                <li>Added "What, Me Worry?", "PACROBAT", "Noxid's Space", and "Retro Haven" buttons to neighbors list. <3</li>
+                                <li>Returned "Error 666" button with <a style="cursor:alias;" href="https://web.archive.org/">archive.org</a> link.</li>
+                                <li>Added "ladyinbed" pages for archival access.</li>
+                                <li>Cleaned up layout of neighbors list. <3</li>
+                                <li>Started adding "cursor: alias;" to external links.</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260528">
+                        <span>
+                            <h3>May 28, 2026</h3>
+                            <ul>
+                                <li>Replaced video game covers with game case scans on Media page.</li>
+                                <li>Changed all 'Music' links to the 'Media' page.</li>
+                                <li>Added "$DIR>EMPTINESS", "PhailSnail", "Liquid Cult", "Madville", "Jello's World" and "bulltown.neo" buttons to neighbors list. <3</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260527">
+                        <span>
+                            <h3>May 27, 2026</h3>
+                            <ul>
+                                <li>Added tabling from <a href="https://tabf5.com/">TabF5</a> to index and About pages. Thank you TabF5!! <3</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260526">
+                        <span>
+                            <h3>May 26, 2026</h3>
+                            <ul>
+                                <li>Added 'Vermilion' button to neighbor list. <3</li>
+                                <li>Rearranged 'Music' page to include other types of media. Future iterations will be renamed to 'Media'.</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260519">
+                        <span>
+                            <h3>May 19, 2026</h3>
+                            <ul>
+                                <li>Added tiling logo background.</li>
+                                <li>Added NeoCities link on index.</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260517">
+                        <span>
+                            <h3>May 17, 2026</h3>
+                            <ul>
+                                <li>Added my car w/ bumper sticker buttons. I thought it was cute! It needs some work, though.</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260512">
+                        <span>
+                            <h3>May 12, 2026</h3>
+                            <ul>
+                                <li>Changed 'Concerts Attended' to 'Events Attended' on Music page.</li>
+                                <li>Added 'ALPHAPUSSY' to 'Spin This S***' list.</li>
+                                <li>Added Growlers show to 'Events Attended'.</li>
+                                <li>Added 'Rusty Bytes' to neighbor list. <3</li>
+                                <li>Added 'Human Made' icon to homepage. (Shared by <a style="cursor:alias;" href="https://tabf5.com/">TabF5</a>.)</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260511">
+                        <span>
+                            <h3>May 11, 2026</h3>
+                            <ul>
+                                <li>Added 'ladyinbed' button to neighbor list. <3</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260506">
+                        <span>
+                            <h3>May 7, 2026</h3>
+                            <ul>
+                                <li>Fixed the background and margins on the blog.</li>
+                                <li>Added laziness note on music page.</li>
+                                <li>New blog entry.</li>
+                                <li>Fixed sun-rays and added pointer interactions to logo on index.</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260506">
+                        <span>
+                            <h3>May 6, 2026</h3>
+                            <ul>
+                                <li>Redesigned the gallery page!</li>
+                                <li>Added 'The Space Station' button to neighbor list. <3</li>
+                                <li>Removed 'Error 666' button from neighbor list. (Site no longer exists.) ;(</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260504">
+                        <span>
+                            <h3>May 4, 2026</h3>
+                            <ul>
+                                <li>Added 'The Aetherway' button to neighbor list. <3</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260501">
+                        <span>
+                            <h3>May 1, 2026</h3>
+                            <ul>
+                                <li>Added 'jaam' and 'KILLDOZER' buttons to neighbor list. <3</li>
+                                <li>Gaming, A/V, and camera collection pages added. [WIP]</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260422">
+                        <span>
+                            <h3>April 22, 2026</h3>
+                            <ul>
+                                <li>Changed background from flat color to gradient effect.</li>
+                                <li>Added `scale` effect to page navigation bar.</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260421">
+                        <span>
+                            <h3>April 21, 2026</h3>
+                            <ul>
+                                <li>Added 'skigosite' button to neighbor list. <3</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260420">
+                        <span>
+                            <h3>April 20, 2026</h3>
+                            <ul>
+                                <li>Added 'Error 666' and 'Xiokka' buttons to neighbor list. <3</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260417">
+                        <span>
+                            <h3>April 17, 2026</h3>
+                            <ul>
+                                <li>Shrunk down index page to fit smaller displays better. (v2.1)</li>
+                                <li>Added changed log.</li>
+                                <li>Added 'TabF5' button to neighbor list. <3</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="box changelogentry" id="20260401">
+                        <span>
+                            <h3>April 1, 2026</h3>
+                            <ul>
+                                <li>Updated style of site's index page (v2.0)</li>
+                                <li>Added 'Sunny's Video' button to neighbor list.</li>
+                                <li><a href="https://hippiejesus.net/about#monstercans">Added "Ultra Peachy Keen" Monster Energy collection</a></li>
+                                <li><a href="https://hippiejesus.net/media/#concerts">Added scale factor to concert posters on Music page.</a></li>
+                            </ul>
+                        </span>
+                        <div class="screenshot">
+                            <img src="/assets/images/screenshots/20260401_index.webp" style="transform:rotate(3deg);">
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </body>
+</html>

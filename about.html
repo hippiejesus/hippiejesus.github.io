@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" style="--header-height: 185px;">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="content-security-policy" content="">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>About – hippiejesus</title>
+    <style>
+      #thanks {
+        position:relative;
+        display:flex;
+        gap:0.5em;
+        justify-content: center;
+      }
+      #thanks ul{padding-left:20px;}
+      .hover4info{
+        position:relative;
+        display: flex;
+        justify-content:center;
+      }
+      .hover4info>div{
+        position: absolute;
+        top: 110%;
+        width: 200px;
+        padding: 0.5em 1em;
+        margin: auto;
+        border-radius: 5px;
+        background:black;
+        opacity:0;
+        scale:1.1;
+        line-height:1.25;
+        transition: 100ms;
+        pointer-events: none;
+      }
+      .hover4info:hover>div{opacity:1;}
+      .mainNav>ul>li>a, #big-logo>a{
+        cursor:pointer;
+      }
+      a {
+        cursor:alias;
+      }
+    </style>
+    <!--[if IE]><link href="stupidie.css" rel="stylesheet"><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div id="big-logo">
+          <a href="https://hippiejesus.net/"><img src="assets/images/site-title.svg" alt="hippiejesus"></a>
+        </div>
+        <nav class="mainNav">
+          <ul>
+            <li><a href="https://hippiejesus.net/about.html">About</a></li>
+            <li><a href="https://hippiejesus.net/photos/">Gallery</a></li>
+            <li><a href="https://hippiejesus.net/videos.html">Videos</a></li>
+            <li><a href="https://hippiejesus.net/media/">Media</a></li>
+            <li><a href="https://hippiejesus.net/collection/">Collection</a></li>
+            <li><a href="https://hippiejesus.net/blog/">Blog</a></li>
+          </ul>
+        </nav>
+        <hr>
+      </header>
+    <div class="pagegrid">
+      <div class="main-wrapper">
+        <span> <!-- About Box -->
+          <div class="headertxt">
+            <h2 style="margin-top:8px;">About</h2>
+          </div>
+          <div class="box" style="display:flex;align-items:center;">
+            <div> <!-- Adjust according to content within. -->
+              <p>Greetings! I'm Dean, and welcome to my personal online landfill.</p>
+              <p>I don't have a plan for many of the things that are included on this website, so expect massive changes out of the blue. I try to include new things to do and more content, so check by often.</p>
+              <p>Photography, videography, and (listening to) music is what I spend most of my free time doing. Please, check out my gallery!</p>
+              <p>I've been carrying a camera with me everywhere I go since my parents got me a Canon Rebel T6 for my 16th birthday. A lot of people have long hair, but most people recognize me with a camera around my neck. If it wasn't for the pictures that I've taken, many of the adventures that my friends and I have been on wouldn't be documented. We simply would've forgotten some of the small moments that can only be shared visually to get the full scope.</p>
+              <p>This website started as a fan project for the artist <a href="https://ryancaraveo.com">Ryan Caraveo</a>, but it was soon forgotten about and abandoned. However, I'm back and will be using this as my personal site for whatever the **** I want it to be as Big Internet collapses on itself.</p>
+              <p>There's not much here yet, so I thank you so much for taking the time to read this!</p>
+            </div>
+            <div style="position:relative;">
+              <img src="assets/images/DSC00157.jpeg" width="200px" style="margin:10px;border:10px solid white;transform:rotate(-2deg);box-shadow:5px 5px 5px black;">
+              <a href="https://tabf5.com/100#143"><img src="assets/images/tabling.png" width="150px" style="position:absolute;bottom:0;left:47%;filter:drop-shadow(2px 2px 2px black);"></a>
+            </div>
+          </div>
+        </span>
+        <span> <!-- What can I do here -->
+          <div class="headertxt">
+            <h3>What is this?</h3>
+          </div>
+          <div class="box">
+            <div>
+              <p>This site is my own personal passion project and a learning experience using HTML/CSS <i>(maybe JS, but we'll see).</i></p>
+              <p>I want to give credit to my inspirations of ideas and layouts that I'm practicing (stealing). This site wouldn't be what it is without them.</p>
+              <div id="thanks">
+                <div class="hover4info">
+                  <a href="https://greenbox.network/"><img src="https://greenbox.network/images/8831/current.png"></a>
+                  <div>My first follower and button adopter! Has a super sick website that got me hooked on web development.</div>
+                </div>
+                <div class="hover4info">
+                  <a href="https://vulpecula.neocities.org/"><img src="https://vulpecula.neocities.org/images/vulpbutton3.gif"></a>
+                  <div>
+                    <ul>
+                      <li>The foundation of the site layout.</li>
+                      <li>'div.wrapper', for a whole page.</li>
+                      <li>Media log and star ratings.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="hover4info">
+                  <a href="https://twelvemen.neocities.org/index.html"><img src="https://twelvemen.neocities.org/12men.gif"></a>
+                  <div>
+                    <ul>
+                      <li><i>This</i> ':hover>div' information box. Used here and on my favorites on the Music page.</li>
+                      <li>Photo gallery layout.</li>
+                      <li>Collections/possessions pages.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="hover4info">
+                  <a href="https://olliveen.neocities.org/" target="_blank"><img src="https://olliveen.neocities.org/img/button.gif"></a>
+                  <div style="width:max-content;">
+                    Song of the Week
+                  </div>
+                </div>
+                <div class="hover4info">
+                  <a href="https://altalenae.neocities.org/"><img src="https://altalenae.neocities.org/images/site/altalenae.png"></a>
+                  <div style="width:max-content;">
+                    Music Log
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
+        <span> <!-- Monster Energy Collection -->
+          <div class="headertxt">
+            <h3>Monster Energy Collection</h3>
+          </div>
+          <div class="box">
+            <div>
+              <p>I'm not addicted. I can quit whenever I want.</p>
+              <div id="monstercans">
+                <!--width is best at 50px, will make an id css wrap-->
+                <img src="assets/images/monster/zeroultra.webp">
+                <img src="assets/images/monster/aussielemonade.webp">
+                <img src="assets/images/monster/voodoogrape.webp">
+                <img src="assets/images/monster/badapple.webp">
+                <img src="assets/images/monster/pipelinepunch.webp">
+                <img src="assets/images/monster/vikingberry.webp">
+                <img src="assets/images/monster/wildpassion.webp">
+                <img src="assets/images/monster/viceguava.webp">
+                <img src="assets/images/monster/ultra-fantasyrubyred.webp">
+                <img src="assets/images/monster/landonorris.webp">
+                <img src="assets/images/monster/strawberryshotzero.webp">
+                <img src="assets/images/monster/strawberryshot.webp">
+                <img src="assets/images/monster/ultrasunrise.webp">
+                <img src="assets/images/monster/pacificpunch.webp">
+                <img src="assets/images/monster/irishcreme.webp">
+                <img src="assets/images/monster/loca-moca.webp">
+                <img src="assets/images/monster/ultra-peachy-keen.webp">
+                <img src="assets/images/monster/ultra-red.webp">
+                <img src="assets/images/monster/mangoloco.webp">
+                <img src="assets/images/monster/ultra-violet.webp">
+                <img src="assets/images/monster/nosgrandprixguava.webp">
+                <img src="assets/images/monster/punkpunch.webp">
+                <img src="assets/images/monster/ultra-strawberry.webp">
+                <img src="assets/images/monster/ultra-bluehawaiian.webp">
+                <img src="assets/images/monster/strawberrylemonade.webp">
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+      <div class="sidebar">
+        <span> <!-- My Music -->
+          <div class="headertxt-w-icon" style="margin-top:0;">
+            <img src="assets/images/icons/xpaudiocd.ico">
+            <h3>My Music</h3>
+          </div>
+          <div class="box">
+            <small>Ryan Caraveo, Pink Floyd, Tame Impala, Linkin Park, <a href="http://movieloverfls.org/21pilots">Twenty One Pilots</a>, Olivia O'Brien, '90s & '00s R&B</small>
+          </div>
+        </span>
+        <span> <!-- My Movies -->
+          <div class="headertxt-w-icon">
+            <img src="assets/images/icons/xpmoviereel.ico" width="16px">
+            <h3>My Movies</h3>
+          </div>
+          <div class="box">
+            <small>Django: Unleashed and Who Framed Roger Rabbit</small>
+          </div>
+        </span>
+        <span> <!-- My TV Shows -->
+          <div class="headertxt-w-icon">
+            <img src="assets/images/icons/xpmediafile.ico" width="16px">
+            <h3>My TV Shows</h3>
+          </div>
+          <div class="box">
+            <small><a href="https://audrie.fanacular.net/house">House M.D.</a>, The Boys, <a href="https://tardis.i-heart-you.net/doctorwho/">Doctor Who</a>, Preacher (Season 1)</small>
+          </div>
+        </span>
+        <span> <!-- My Games -->
+          <div class="headertxt-w-icon">
+            <img src="assets/images/icons/xpmines.ico" width="16px">
+            <h3>My Games</h3>
+          </div>
+          <div class="box">
+            <small><a href="https://imaginary.nu/deadrising/">Dead Rising</a>, <a href="https://mezuco.re/fanlistings/rdr2">RDR2</a>, Helldivers II, <a href="https://fan.redcrown.net/halo/">Halo</a>, Saints Row 2, Deadlock</small><br><hr>
+            <div style="display:flex;align-items:center;">
+              <a href="https://steamcommunity.com/id/hippiejesusfr/" style="text-decoration:none;"><img src="assets/images/icons/steam.svg" width="16px" style="padding-right:5px;"></a>
+              <small>← Add me on Steam!</small>
+            </div>
+          </div>
+        </span>
+        <span> <!-- Gift Shop -->
+          <div class="headertxt-w-icon">
+            <img src="assets/images/icons/xpentirenet.ico" width="16px">
+            <h3>Free Gift Shop</h3>
+          </div>
+          <div class="box" style="display:flex;text-align:center;">
+            <div>
+              <small>Take my button!</small>
+              <img src="assets/images/buttons/hj.png" style="margin-top:3px;">
+            </div>
+          </div>
+        </span>
+        <span> <!-- Certifications -->
+          <div class="headertxt-w-icon">
+            <img src="assets/images/icons/xpdocs.ico" width="16px">
+            <h3>Certifications</h3>
+          </div>
+          <div class="box">
+            <div>
+              <img src="assets/images/comptia/csis.png" width="124px" style="margin-top: 10px;">
+              <img src="assets/images/comptia/cysa.png" width="124px">
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+<br>
+    <img src="assets/images/construction.gif" style="display:flex;margin:auto;">
+  </body>
+</html>

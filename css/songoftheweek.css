@@ -1,0 +1,95 @@
+body {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #1b1b1b;
+  display: block;
+}
+
+div {
+  display: block;
+}
+
+h3 {
+  margin:0;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  display:flex;
+  flex-direction: column;
+}
+
+.box {
+  border: 1px solid white;
+  background: #1b1b1b;
+  padding-top: 0.5em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.weeklist {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  max-width: 600px;
+  margin:auto;
+}
+
+.artonleft {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 400px;
+}
+
+.artonright {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.trackartwork {
+  margin:10px;
+}
+
+.trackinfo {
+  text-align: center;
+  margin: 20px;
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.mainNav {
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.mainNav a{
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.mainNav ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mainNav li{
+  margin: 2pc;
+  margin-bottom: 1pc;
+}

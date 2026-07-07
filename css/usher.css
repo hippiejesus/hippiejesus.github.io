@@ -1,0 +1,61 @@
+/* USHER - Universal Site Header, Easily Repeatable */
+
+header {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 4em;
+  hr {
+    color: white;
+    width: 100%;
+    margin: auto;
+  }
+}
+#big-logo {
+  img {
+    width: 500px;
+    transition: 200ms ease;
+  }
+  img:hover {
+    scale:101%;
+    filter:drop-shadow(0 2px 10px black);
+  }
+  img:active{
+    scale: 99%;
+    filter:none;
+    transition: 0ms;
+  }
+}
+.mainNav{
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  li {
+    margin: 2pc;
+    margin-bottom: 1pc;
+    transition: 100ms;
+  }
+  li:hover {
+    scale: 150%;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em 3em;
+  box-shadow: 0 0 20px black;
+  background-color: #2b2b2b;
+}

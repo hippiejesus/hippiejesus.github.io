@@ -1,397 +1,487 @@
 <!DOCTYPE html>
 <html lang="en" style="--header-height: 185px;">
-    <head>
-        <meta charset="utf-8">
-        <link rel="icon" href="assets/images/favicons/64x64.png">
-        <meta name="viewport" content="width=device-width">
-        <meta http-equiv="content-security-policy" content="">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <title>hippiejesus</title>
-        <style>
-            .navtable::before{
-                /*Spinning sun ray graphic*/
-                content: '';
-                position: absolute;
-                left:0;
-                right:0;
-                width: 100%;
-                height: 100%;
-                scale: 125%;
-                z-index: 0;
-                background-image: url("assets/images/rays.png");
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                opacity: 40%;
-                animation-name: spin;
-                animation-duration: 50s;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                pointer-events: none;
-            }
-            #landing-logo img {
-                width: 500px;
-                margin-top:0;
-                transition: 100ms ease;
-            }
-            #landing-logo img:hover {
-                scale: 1.1;
-            }
-            #landing-logo img:active {
-                scale: 1.05;
-                transition: 0ms;
-                filter:brightness(0.9)
-            }
-            #siteIcons {
-                display:grid;
-                grid-auto-columns: 200px;
-                grid-auto-flow: column;
-                margin:3em;
-                justify-content: center;
-                justify-items: center;
-                align-items: center;
-                gap:3em;}
-            #siteIcons img:active {opacity:0.6;}
-            .headertxt {margin:auto;text-align:center;}
-            #indexfooter {display:flex;justify-content:center;}
-            .changelogentry {margin:1em auto;width:500px;display:flex;justify-content:space-between;align-items:center;}
-            .screenshot img {width:100px;border:3px solid white;box-shadow:1px 1px 3px black;}
-            .screenshot img:hover {scale:300%;box-shadow:0 3px 5px black;}
-            #bumperStickers {
-                display: flex;
-                justify-content: center;
-                position: relative;
-                div {
-                  position: absolute;
-                  display: flex;
-                  justify-content: center;
-                  top: 68%;
-                }
-            }
-            .buttons {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                margin: auto;
-                margin-top: 1em;
-                margin-bottom: 1em;
-                justify-content: center;
-                align-items: center;
-                img, div{
-                  margin: 2px;
-                  height: 31px;
-                  width: 88px;
-                }
-                img:hover, div:hover{
-                  scale: 110%;
-                  transform:rotate(2deg); 
-                  cursor: alias;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="wrapper" style="margin:0 auto; padding: 2em;">
-            <span>
-                <table style="margin:auto auto 2em;padding:0;position:relative;">
-                    <tbody class="navtable">
-                        <tr>
-                            <td colspan="2" align="right" valign="bottom"> <!--About-->
-                                <div class="new-nav-buttons" butt-name="ABOUT">
-                                    <a href="about.html">
-                                        <img src="assets/images/icons/hq/help.png" alt="Quietion Mark Icon">
-                                    </a>
-                                </div>
-                            </td>
-                            <td colspan="2" align="center" valign="top"> <!--Gallery-->
-                                <div class="new-nav-buttons" butt-name="GALLERY" style="margin-bottom:4em;">
-                                    <a href="photos/">
-                                        <img src="assets/images/icons/hq/digicam.png" alt="Digital Camera">
-                                    </a>
-                                </div>
-                            </td>
-                            <td colspan="2" align="left" valign="bottom"> <!--Videos-->
-                                <div class="new-nav-buttons" butt-name="VIDEOS">
-                                    <a href="videos.html">
-                                        <img src="assets/images/icons/hq/camcorder.png" alt="Camcorder">
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="6" align="center" valign="middle"> <!--Logo-->
-                                <div id="landing-logo">
-                                    <!--Shoutout to tabf5 for the tabling homie!-->
-                                    <img src="assets/images/143.png" style="width:50px;position:absolute;right:250px;top:37%;transform:rotate(10deg);">
-                                    <img src="assets/images/site-title.svg" style="filter: drop-shadow(0 0 3px #e9a45a);">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="right" valign="top"> <!--Music-->
-                                <div class="new-nav-buttons" butt-name="MEDIA">
-                                    <a href="media/">
-                                        <img src="assets/images/icons/hq/cd.png" alt="Audio CD">
-                                    </a>
-                                </div>
-                            </td>
-                            <td colspan="2" align="center" valign="bottom"> <!--Collection-->
-                                <div class="new-nav-buttons" butt-name="COLLECTION" style="margin-top:5em;">
-                                    <a href="collection/">
-                                        <img src="assets/images/icons/hq/cabinet.png" alt="Filing Cabinet">
-                                    </a>
-                                </div>
-                            </td>
-                            <td colspan="2" align="center" valign="bottom"> <!--Blog-->
-                                <div class="new-nav-buttons" butt-name="BLOG" style="margin-top:5em;">
-                                    <a href="blog/">
-                                        <img src="assets/images/icons/hq/mydocs.png" alt="Documents Folder">
-                                    </a>
-                                </div>
-                            </td>
-                            <td align="center" valign="top"> <!--Guestbook-->
-                                <div class="new-nav-buttons" butt-name="GUESTBOOK">
-                                    <a href="https://hippiejesus.atabook.org/" style="cursor:alias;">
-                                        <img src="assets/images/icons/hq/controlpanel.png" alt="Checkmark">
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </span>
-            <div><hr></div>
-            <span>
-                <div class="buttons">
-                    <!--Hello, neighbors! I'm sorry if I've missed you. I'll have to give my contact info soon for problems like this.-->
-                    <a href="https://greenbox.network/"><img title="" src="https://greenbox.network/images/8831/current.png"></a>
-                    <a href="https://xyllria.neocities.org" target="_blank"><img title="Xyl, of Xyllrium" src="https://xyllria.neocities.org/buttonxylcube.gif" alt="Xyl"></a>
-                    <a href="https://web.archive.org/web/20260330011229/https://error-666.neocities.org/" target="_blank"><img title="Error 666" src="assets/images/buttons/error666.gif" alt="Error 666"></a>
-                    <a href="https://sunnysvideo.neocities.org/"><img title="Sunny's Video Store" src="https://sunnysvideo.neocities.org/images/graphics/Sunnys_Video_Website_Button.gif" alt="Sunny's Video"></a>
-                    <a href="https://killdozer.online/" target="_blank" style="width:88px;text-align:center;"><img src="https://killdozer.online/buttons/KILLDOZER.png" alt="KILLDOZER"></a>
-                    <a href="https://tabf5.com/" target="_blank"><img src="https://tabf5.com/img/button.gif" alt="TabF5.com" style="image-rendering: pixelated;"></a>
-                    <a href="https://xiokka.neocities.org/" target="_blank"><img src="https://xiokka.neocities.org/buttons/my_buttons/button4.png" alt="Xiokka"></a>
-                    <a href="https://skigo.site/"><img src="https://skigo.site/pics/skigosite88x31.png" alt="skigosite"></a>
-                    <a href="https://animeman.us/" target="_blank"><img src="assets/images/buttons/_gojo_button_blue.png" alt="JAAM"></a>
-                    <a href="https://millennium-whoop.github.io/aetherway/" target="_blank"><img src="https://millennium-whoop.github.io/aetherway/buttons/88x31_01.gif" alt="Aetherway"></a>
-                    <a href="https://spacefungus.tv/" target="_blank"><img src="assets/images/buttons/station-butt.gif" alt="The Space Station"></a>
-                    <a href="https://hippiejesus.net/archive/ladyinbed/about/" target="_blank"><img src="assets/images/buttons/ladyinbed_button.gif" alt="Lady In Bed" style="cursor:pointer;"></a>
-                    <a href="https://rusty-bytes.neocities.org/" target="_blank"><img src="assets/images/buttons/mybutton.png" alt="Rusty Bytes"></a>
-                    <div style="height: 31px; width: 88px;"><a style="background-color: transparent; color: black; text-decoration: none;" href="https://dir.emptiness.io"  target="_blank"><div style="position: relative; background-color: #e7fa19; font-color: black; font-family: 'Verdana'; font-size: 10px; height: 31px; width: 88px; overflow: hidden; border: 1px black; margin: 0 0 0 0; padding: 0 0 0 0;"><span style="width: 31px; height: 88px; position: absolute; transform: rotate(-90deg) translatey(-88px); transform-origin: top right; display: flex; justify-content: flex-end; font-size: 2px; font-family: monospace; overflow-wrap: anywhere; top: 0; right: 0;">this is an 88x31 button made entirely out of text because that is the theme of the website. i am human. we are human. fuck the algorithm. take back the web. this is an 88x31 button made entirely out of text because that is the theme of the website. i am human. we are human. fuck the algorithm. take back the web. this is an 88x31 button made entirely out of text because that is the theme of the website.</span><span style="position: absolute; font-size: 4px; top: 3 px; left: 48px;">&#9654;&#9654;&#9654;&#9654;&#9654;</span><span style="background-color: black; height: 3px; width: 44px; position: absolute; top: 5px; left: 0;"></span><span style="background-color: black; width: 5px; height: 31px; position: absolute; top: 0; right: 5px;"></span><span style="background-color: black; color: #e7fa19; position: absolute; right: 0; bottom: 5px; z-index: 3;">$DIR&gt;EMPTINESS</span></div></a></div>
-                    <a href="https://phailsnail.neocities.org" target="_blank"><img src="assets/images/buttons/PhailSnail.png" alt="PhailSnail"></a>
-                    <a href="https://liquidcult.neocities.org" target="_blank"><img src="assets/images/buttons/liquidcultbanner.gif" alt="Liquid Cult"></a>
-                    <a href="https://vermi1ion.neocities.org" target="_blank" title="vermilion" alt="vermilion"><img src="https://vermi1ion.neocities.org/assets/v_white.gif" width="88px"></a>
-                    <a href="https://madville.neocities.org/" target="_blank"><img src="assets/images/buttons/madville.gif" alt="Madville"></a>
-                    <a href="https://jello01000101.neocities.org/" target="_blank"><img src="https://file.garden/Z7xIJSbOXhtckiPg/alienjello.gif"></a> 
-                    <a href="https://bulltown.neocities.org/" target="_blank"><img src="assets/images/buttons/newb.png" alt="bulltown.neo"></a>
-                    <a href="https://whatmeworry.neocities.org/" target="_blank"><img src="assets/images/buttons/whatmeworry.png" alt="What, Me Worry?"></a>
-                    <a href="https://pacrobat.com/" target="_blank"><img src="assets/images/buttons/pacrobutton.gif" alt="PACROBAT!!"></a>
-                    <a href="https://noxid-kin.neocities.org/" target="_blank"><img src="assets/images/buttons/NoxidButton.gif" alt="Noxid's Space"></a>
-                    <a href="https://retro-haven.neocities.org/" target="_blank"><img src="assets/images/buttons/retrohaven.gif" alt="Retro Haven"></a>
-                    <a href="https://kid-koda.neocities.org/" target="_blank"><img src="assets/images/buttons/thebulletin.gif" alt="The Bulletin"></a>
-                    <a href="https://ughbees.neocities.org/"><img src="assets/images/buttons/ughbeesbutton4.png" alt="Ughbees"></a>
-                    <a href="https://infi-power.neocities.org"><img src="assets/images/buttons/infipower-gold.png" alt="infi-power"></a>
-                    <a href="https://saltedslug.neocities.org"><img src="assets/images/buttons/slug_btn02.png" alt="Salty's Lair"></a>
-                    <a href="https://datoxicwaltz.neocities.org" target="_blank"><img src="https://files.catbox.moe/odo8i4.gif" width="88px" height="31px" alt="datoxicwaltz"></a>
-                    
-                </div>
-                <div style="margin-bottom:3em;"><hr></div>
-            </span>
-            <div id="siteIcons">
-                <span><a href="https://hinokodo.itch.io/human-made" style="cursor:alias;"><img src="/assets/images/icons/humanmade.png" width="200px"></a></span>
-                <span><a href="https://neocities.org/site/hippiejesus" style="cursor:alias;"><img src="assets/images/icons/neocitiesbadge.webp" width="200px"></a></span>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="content-security-policy" content="">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Media – hippiejesus</title>
+    <!--[if IE]><link href="stupidie.css" rel="stylesheet"><![endif]-->
+    <style>
+        h1 {
+            text-align: center;
+            margin-bottom: 0;
+        }
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        hr {
+            margin-top: 0;
+        }
+        .box {padding: 1em;}
+        #ipod .box{margin-left:1em;}
+        #ipod ul{line-height:1.5;}
+        #ipod iframe{border:0;padding:0;}
+        #concerts{margin-top:1em;display:flex;flex-direction:column;justify-content:center;}
+        #concerts small{margin-bottom:0.5em;}
+        #concerts img{width:100%;border:5px solid white;box-shadow:3px 3px 5px black;transition:100ms;}
+        #concerts img:hover{scale:110%;z-index:0;}
+        .embeds{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0.5em;overflow-y:scroll;max-height:400px;}
+        .favAlbums, .favDVDs{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content:center;
+            row-gap: -1em;
+            scale: 1;
+        }
+        .favAlbums img{
+            width:196px;
+            height:196px;
+        }
+        .favDVDs img{
+            width:150px;
+        }
+        .hover4info {
+            position:relative;
+            display: flex;
+            justify-content:center;
+        }
+        .hover4info:hover{z-index:100;}
+        .hover4info img{
+            transition: 100ms;
+            box-shadow: 0 1px 4px black;
+            margin-bottom: -0.5em;
+        }
+        .hover4info:hover img{
+            scale:1.1;
+            filter:drop-shadow(0 2px 6px black);
+        }
+        .hover4info>div {
+            position: absolute;
+            top: 110%;
+            width: max-content;
+            padding: 0.5em 1em;
+            margin: auto;
+            border-radius: 5px;
+            text-align: center;
+            background:black;
+            opacity:0;
+            scale:1.1;
+            line-height:1.25;
+            transition: 100ms;
+            pointer-events:none;
+        }
+        .hover4info:hover>div{
+            opacity:1;
+        }
+        .hover4info>div>span{
+            font-size: 16pt;
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+        <header>
+            <div id="big-logo">
+                <a href="https://hippiejesus.neocities.org/"><img src="../assets/images/site-title.svg" alt="hippiejesus"></a>
             </div>
-            <div id="bumperStickers" style="margin:auto;justify-content:center;">
-                <img src="assets/images/corollass.png" width="600px">
-                <div>
-                    <img src="assets/images/buttons/bestonpc.gif">
-                    <img src="assets/images/buttons/html.gif">
-                    <img src="assets/images/buttons/mwcss.gif">
-                    <img src="assets/images/buttons/madewithvsc.png">
-                    <a href="https://petrapixel.neocities.org/about/blinkies" style="cursor:alias;"><img src="assets/images/buttons/created-by-a-human.png"></a>
-                    <a href="https://ifixit.com/" style="cursor:alias;"><img src="assets/images/buttons/righttorepair.png"></a>
-                </div>
-            </div>
-            <div id="indexfooter">
-                <div style="display:flex;flex-direction:column;">
-                    <h2 class="headertxt">Change Log</h2>
-                    <hr width="200px">
-                    <div class="box changelogentry" id="20260618">
-                        <span>
-                            <h3>June 18, 2026</h3>
-                            <ul>
-                                <li>Added "Bonnaroo" and "Groove & Sunshine Festival" posters to Media page. Gallery pages coming soon.</li>
-                                <li>Added songs to featured section on Media page.</li>
-                                <li>Added movie entry to media log.</li>
-                                <li>Added "infi-power", "Salty's Lair" and "datoxicwaltz" buttons to neighbors list. <3</li>
-                            </ul>
-                        </span>
+            <nav class="mainNav">
+                <ul>
+                    <li><a href="https://hippiejesus.net/about.html">About</a></li>
+                    <li><a href="https://hippiejesus.net/photos/">Gallery</a></li>
+                    <li><a href="https://hippiejesus.net/videos.html">Videos</a></li>
+                    <li><a href="https://hippiejesus.net/music/">Media</a></li>
+                    <li><a href="https://hippiejesus.net/collection/">Collection</a></li>
+                    <li><a href="https://hippiejesus.net/blog/">Blog</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </header>
+        <div class="pagegrid">
+            <div class="main-wrapper">
+                <span>
+                    <div class="headertxt" style="margin-top:0;">
+                        <h2>Featured Tracks: Spin This S***</h2>
                     </div>
-                    <div class="box changelogentry" id="20260602">
-                        <span>
-                            <h3>June 2, 2026</h3>
-                            <ul>
-                                <li>Added "What, Me Worry?", "PACROBAT", "Noxid's Space", and "Retro Haven" buttons to neighbors list. <3</li>
-                                <li>Returned "Error 666" button with <a style="cursor:alias;" href="https://web.archive.org/">archive.org</a> link.</li>
-                                <li>Added "ladyinbed" pages for archival access.</li>
-                                <li>Cleaned up layout of neighbors list. <3</li>
-                                <li>Started adding "cursor: alias;" to external links.</li>
-                            </ul>
-                        </span>
+                    <div class="box embeds" height="424px">
+                         <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=1503690978/size=large/bgcol=333333/linkcol=e32c14/minimal=true/track=4084550404/transparent=true/" seamless><a href="https://rainbowkittensurprise.bandcamp.com/album/seven">Seven by Rainbow Kitten Surprise</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=1971128787/size=large/bgcol=333333/linkcol=e32c14/minimal=true/track=2824038278/transparent=true/" seamless><a href="https://mtjoyband.bandcamp.com/album/mt-joy">Mt. Joy by Mt. Joy</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=2526813997/size=large/bgcol=333333/linkcol=e32c14/minimal=true/track=2432311304/transparent=true/" seamless><a href="https://turnstilehc.bandcamp.com/album/nonstop-feeling">Nonstop Feeling by Turnstile</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=2087408488/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/" seamless><a href="https://vincestaples.bandcamp.com/album/cry-baby">Cry Baby by Vince Staples</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=1948077361/size=large/bgcol=333333/linkcol=e32c14/minimal=true/track=4161130417/transparent=true/" seamless><a href="https://menitrust.bandcamp.com/album/untourable-album">Untourable Album by Men I Trust</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=1692592799/size=large/bgcol=333333/linkcol=de270f/minimal=true/track=391492483/transparent=true/" seamless><a href="https://yotclub.bandcamp.com/album/bipolar">Bipolar by yot club</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=1653146062/size=large/bgcol=333333/linkcol=e32c14/minimal=true/track=2567515821/transparent=true/" seamless><a href="https://automatic-band.bandcamp.com/album/signal">Signal by Automatic</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=2974393527/size=large/bgcol=333333/linkcol=de270f/minimal=true/track=2013108711/transparent=true/" seamless><a href="https://sextile.bandcamp.com/album/push">Push by Sextile</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=1475881236/size=large/bgcol=333333/linkcol=de270f/minimal=true/track=3558999487/transparent=true/" seamless><a href="https://l-imperatrice.bandcamp.com/album/tako-tsubo">Tako Tsubo by L&#39;Impératrice</a></iframe>
+                        <iframe style="border: 0; width: 196px; height: 196px;" src="https://bandcamp.com/EmbeddedPlayer/album=265700984/size=large/bgcol=333333/linkcol=e32c14/minimal=true/track=3619560287/transparent=true/" seamless><a href="https://bbnomoney.bandcamp.com/album/bbno">bbno$ by bbno$</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=1552420461/size=large/bgcol=333333/linkcol=de270f/minimal=true/transparent=true/" seamless><a href="https://thundercat.bandcamp.com/album/no-more-lies">No More Lies by Thundercat &amp; Tame Impala</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=3670165089/size=large/bgcol=333333/linkcol=de270f/minimal=true/track=3276540822/transparent=true/" seamless><a href="https://pixelgrip.bandcamp.com/album/arena">ARENA by Pixel Grip</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/track=2279157900/size=large/bgcol=333333/linkcol=de270f/minimal=true/transparent=true/" seamless><a href="https://danbalan.bandcamp.com/track/crazy-loop-mm-ma-ma">Crazy Loop (Mm-Ma-Ma) by Crazy Loop</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/track=50822153/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/" seamless><a href="https://grunchrules.bandcamp.com/track/ftcu-and-shove-it">FTCU (And Shove It) by That&#39;s So Raben</a></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=1969346194/size=large/bgcol=333333/linkcol=de270f/minimal=true/track=1652902973/transparent=true/" seamless><a href="https://dankmus.bandcamp.com/album/is-cat-now">Is Cat Now by Dankmus</a></iframe>
+                        <iframe width="190" height="190" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1972855615&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <iframe style="border: 0; width: 190px; height: 190px;" src="https://bandcamp.com/EmbeddedPlayer/album=3321709921/size=large/bgcol=333333/linkcol=e32c14/minimal=true/track=228681064/transparent=true/" seamless><a href="https://j-walkispissed.bandcamp.com/album/assqu-ke">assquåke by j-walk</a></iframe>
                     </div>
-                    <div class="box changelogentry" id="20260528">
-                        <span>
-                            <h3>May 28, 2026</h3>
-                            <ul>
-                                <li>Replaced video game covers with game case scans on Media page.</li>
-                                <li>Changed all 'Music' links to the 'Media' page.</li>
-                                <li>Added "$DIR>EMPTINESS", "PhailSnail", "Liquid Cult", "Madville", "Jello's World" and "bulltown.neo" buttons to neighbors list. <3</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260527">
-                        <span>
-                            <h3>May 27, 2026</h3>
-                            <ul>
-                                <li>Added tabling from <a href="https://tabf5.com/">TabF5</a> to index and About pages. Thank you TabF5!! <3</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260526">
-                        <span>
-                            <h3>May 26, 2026</h3>
-                            <ul>
-                                <li>Added 'Vermilion' button to neighbor list. <3</li>
-                                <li>Rearranged 'Music' page to include other types of media. Future iterations will be renamed to 'Media'.</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260519">
-                        <span>
-                            <h3>May 19, 2026</h3>
-                            <ul>
-                                <li>Added tiling logo background.</li>
-                                <li>Added NeoCities link on index.</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260517">
-                        <span>
-                            <h3>May 17, 2026</h3>
-                            <ul>
-                                <li>Added my car w/ bumper sticker buttons. I thought it was cute! It needs some work, though.</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260512">
-                        <span>
-                            <h3>May 12, 2026</h3>
-                            <ul>
-                                <li>Changed 'Concerts Attended' to 'Events Attended' on Music page.</li>
-                                <li>Added 'ALPHAPUSSY' to 'Spin This S***' list.</li>
-                                <li>Added Growlers show to 'Events Attended'.</li>
-                                <li>Added 'Rusty Bytes' to neighbor list. <3</li>
-                                <li>Added 'Human Made' icon to homepage. (Shared by <a style="cursor:alias;" href="https://tabf5.com/">TabF5</a>.)</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260511">
-                        <span>
-                            <h3>May 11, 2026</h3>
-                            <ul>
-                                <li>Added 'ladyinbed' button to neighbor list. <3</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260506">
-                        <span>
-                            <h3>May 7, 2026</h3>
-                            <ul>
-                                <li>Fixed the background and margins on the blog.</li>
-                                <li>Added laziness note on music page.</li>
-                                <li>New blog entry.</li>
-                                <li>Fixed sun-rays and added pointer interactions to logo on index.</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260506">
-                        <span>
-                            <h3>May 6, 2026</h3>
-                            <ul>
-                                <li>Redesigned the gallery page!</li>
-                                <li>Added 'The Space Station' button to neighbor list. <3</li>
-                                <li>Removed 'Error 666' button from neighbor list. (Site no longer exists.) ;(</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260504">
-                        <span>
-                            <h3>May 4, 2026</h3>
-                            <ul>
-                                <li>Added 'The Aetherway' button to neighbor list. <3</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260501">
-                        <span>
-                            <h3>May 1, 2026</h3>
-                            <ul>
-                                <li>Added 'jaam' and 'KILLDOZER' buttons to neighbor list. <3</li>
-                                <li>Gaming, A/V, and camera collection pages added. [WIP]</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260422">
-                        <span>
-                            <h3>April 22, 2026</h3>
-                            <ul>
-                                <li>Changed background from flat color to gradient effect.</li>
-                                <li>Added `scale` effect to page navigation bar.</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260421">
-                        <span>
-                            <h3>April 21, 2026</h3>
-                            <ul>
-                                <li>Added 'skigosite' button to neighbor list. <3</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260420">
-                        <span>
-                            <h3>April 20, 2026</h3>
-                            <ul>
-                                <li>Added 'Error 666' and 'Xiokka' buttons to neighbor list. <3</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260417">
-                        <span>
-                            <h3>April 17, 2026</h3>
-                            <ul>
-                                <li>Shrunk down index page to fit smaller displays better. (v2.1)</li>
-                                <li>Added changed log.</li>
-                                <li>Added 'TabF5' button to neighbor list. <3</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="box changelogentry" id="20260401">
-                        <span>
-                            <h3>April 1, 2026</h3>
-                            <ul>
-                                <li>Updated style of site's index page (v2.0)</li>
-                                <li>Added 'Sunny's Video' button to neighbor list.</li>
-                                <li><a href="https://hippiejesus.net/about#monstercans">Added "Ultra Peachy Keen" Monster Energy collection</a></li>
-                                <li><a href="https://hippiejesus.net/media/#concerts">Added scale factor to concert posters on Music page.</a></li>
-                            </ul>
-                        </span>
-                        <div class="screenshot">
-                            <img src="/assets/images/screenshots/20260401_index.webp" style="transform:rotate(3deg);">
+                </span>
+                <h2 style="margin-top:2em;">my favs :D</h2><br><hr style="box-shadow: 0 0 3px white;">
+                <h3 style="margin: 2em auto 1em;justify-content:center;">Albums</h3>
+                <span> 
+                    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;">
+                        <div class="favAlbums">
+                            <div class="hover4info">
+                                <a href="https://www.youtube.com/watch?v=Tu7oq3VNgpY&list=OLAK5uy_mzowhqljIOba8BVGEmVkeaWeL2S_bO4bw">
+                                    <img style="transform:rotate(-2deg);" src="https://i.discogs.com/o8yxVz9tk17AyBwARJvs9U9alurpwGv_K44CI-1qHzA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzNTQ3/NTAtMTQ3NzIzNzc3/OC02MzExLmpwZWc.jpeg">
+                                </a>
+                                <div>
+                                    <span>Wish You Were Here</span><br>
+                                    Pink Floyd - 1975
+                                </div>
+                            </div>
+                            <div class="hover4info" style="margin: 0 -0.25em 0">
+                                <a href="https://www.youtube.com/watch?v=vjVkXlxsO8Q&list=OLAK5uy_nYTF1JJIQpw1HYW6ywZSe0nHhXltQPaZk">
+                                    <img style="transform:rotate(1deg);" src="https://is1-ssl.mzstatic.com/image/thumb/Video126/v4/e4/ab/57/e4ab57e9-d8b5-f94f-b695-be0582eaa0d9/Job7137be9e-767d-4591-a280-b7e66ba6fa29-148523311-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_279668292_1419787157-Time1681344940398.png/296x296.jpg">
+                                </a>
+                                <div>
+                                    <span>Hybrid Theory</span><br>
+                                    Linkin Park - 2000
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://www.youtube.com/watch?v=pFptt7Cargc&list=OLAK5uy_k7FTSn7ydw3cNY9X5w2UJYVO7fLXPDTik">
+                                    <img style="transform:rotate(-1deg);" src="https://i.discogs.com/ekRbUQKTEw9n_FmZ-g1-hjfVkPdQze2PSb0YJskugug/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczMDQx/MzMtMTU5NDMyODEz/Ni02Mzg4LnBuZw.jpeg">
+                                </a>
+                                <div>
+                                    <span>Currents</span><br>
+                                    Tame Impala - 2015
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://www.youtube.com/watch?v=pmKOYDCJPSk&list=OLAK5uy_lvW7V0KP1pRTC9yE0W0fZN5tNx3nsSvQE">
+                                    <img style="transform:rotate(1deg);" src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3e/86/2c/3e862c27-c11c-db02-534e-4d31b5510415/859724770399_cover.jpg/296x296.jpeg">
+                                </a>
+                                <div>
+                                    <span>At Least I Tried</span><br>
+                                    Ryan Caraveo - 2018
+                                </div>
+                            </div>
+                            <div class="hover4info" style="margin:0 -0.25em;">
+                                <a href="https://www.youtube.com/watch?v=5qCPJusjwg8&list=OLAK5uy_lzxC8HQyKtYnwa8SEmG1Fq5382_SwzzbM">
+                                    <img style="transform:rotate(0.5deg);" src="https://i.discogs.com/aW5ySQirxH2-02GCRi5IhutSi9KCbZRuqK0zTlXPWds/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU1NTAz/Mi0xNDMxMDcxNjg1/LTMyODIuanBlZw.jpeg">
+                                </a>
+                                <div>
+                                    <span>Aorta</span><br>
+                                    Aorta - 1969
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://www.youtube.com/watch?v=r_9Kf0D5BTs&list=PL3roRV3JHZzZd6SeYqYhPFFOm5pBlAQWg">
+                                    <img  style="transform:rotate(-3deg);" src="https://i.discogs.com/sFjX8WpD2QxJwnXbNTa0KZmdNe81Cz4ScMT6DWJX4u0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgwMDcw/NzItMTY3ODExNzk2/Mi04MTczLmpwZWc.jpeg">
+                                </a>
+                                <div>
+                                    <span>Blurryface</span><br>
+                                    Twenty One Pilots - 2015
+                                </div>
+                            </div>
                         </div>
                     </div>
-                 </div>
+                </span>
+                <h3 style="margin: 3em auto 1em;justify-content:center;">Movies and TV Shows</h3>
+                <span> 
+                    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;">
+                        <div class="favDVDs">
+                            <div class="hover4info">
+                                <a href="https://letterboxd.com/film/django-unchained/">
+                                    <img style="transform:rotate(1deg);" src="https://hippiejesus.net/music/assets/images/covers/djangounchained.jpg">
+                                </a>
+                                <div>
+                                    <span>Django Unchained</span><br>
+                                    Quentin Tarantino - 2012
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://letterboxd.com/film/who-framed-roger-rabbit/">
+                                    <img style="transform:rotate(1deg);" src="https://hippiejesus.net/music/assets/images/covers/whoframedrogerrabbit.jpg">
+                                </a>
+                                <div>
+                                    <span>Who Framed Roger Rabbit</span><br>
+                                    Robert Zemeckis - 1988
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://letterboxd.com/film/blazing-saddles/">
+                                    <img style="transform:rotate(0deg);" src="https://a.ltrbxd.com/resized/film-poster/4/5/6/3/1/45631-blazing-saddles-0-1000-0-1500-crop.jpg?v=75fe1e4fb7">
+                                </a>
+                                <div>
+                                    <span>Blazing Saddles</span><br>
+                                    Mel Brooks - 1974
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://letterboxd.com/film/click/">
+                                    <img style="transform:rotate(-2deg);" src="https://a.ltrbxd.com/resized/film-poster/4/7/2/5/5/47255-click-0-1000-0-1500-crop.jpg?v=21dfe24b64">
+                                </a>
+                                <div>
+                                    <span>Click</span><br>
+                                    Frank Coraci - 2006
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://letterboxd.com/film/scary-movie-2/">
+                                    <img style="transform:rotate(1deg);" src="https://a.ltrbxd.com/resized/film-poster/4/9/4/4/2/49442-scary-movie-2-0-1000-0-1500-crop.jpg?v=fc034be22b">
+                                </a>
+                                <div>
+                                    <span>Scary Movie 2</span><br>
+                                    Keenan Ivory Wayans - 2001
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://www.youtube.com/watch?v=9HgJSvZ867A">
+                                    <img style="transform:rotate(-2deg);" src="https://static.wikia.nocookie.net/tardis/images/2/2d/DW_Series_2_Volume_1_DVD_Australian_cover.jpg/revision/latest?cb=20100629074547">
+                                </a>
+                                <div>
+                                    <span>Doctor Who</span><br>
+                                    2005 - Present
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+                <h3 style="margin: 3em auto 1em;justify-content:center;">Video Games</h3>
+                <span> 
+                    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;">
+                        <div class="favDVDs">
+                            <div class="hover4info">
+                                <a href="https://www.youtube.com/watch?v=mnIGIQqmge4">
+                                    <img style="transform:rotate(-2deg);" src="assets/images/covers/deadrising360.webp">
+                                </a>
+                                <div>
+                                    <span>DEAD RISING</span><br>
+                                    CAPCOM - 2006
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://www.youtube.com/watch?v=xrMiimYuYss">
+                                    <img style="transform:rotate(0deg);" src="assets/images/covers/sr2.webp">
+                                </a>
+                                <div>
+                                    <span>Saints Row 2</span><br>
+                                    Volition - 2008
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://www.youtube.com/watch?v=T0oAiQZhGrU">
+                                    <img style="transform:rotate(2deg);" src="assets/images/covers/h3.webp">
+                                </a>
+                                <div>
+                                    <span>Halo 3</span><br>
+                                    Bungie Studios - 2007
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="">
+                                    <img style="transform:rotate(-2deg);" src="assets/images/covers/midnightclubla.webp">
+                                </a>
+                                <div>
+                                    <span>Midnight Club: Los Angeles</span><br>
+                                    Rockstar Games - 2008
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="">
+                                    <img style="transform:rotate(-2deg);" src="assets/images/covers/reach.webp">
+                                </a>
+                                <div>
+                                    <span>Halo: Reach</span><br>
+                                    Bungie Studios - 2010
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://www.youtube.com/watch?v=2s4OZcV-5fE">
+                                    <img style="transform:rotate(1deg);" src="assets/images/covers/re4ps4.webp">
+                                </a>
+                                <div>
+                                    <span>resident evil 4</span><br>
+                                    CAPCOM - 2005
+                                </div>
+                            </div>
+                            <div class="hover4info">
+                                <a href="https://www.youtube.com/watch?v=URi6k5owisE">
+                                    <img style="transform:rotate(-3deg);" src="assets/images/covers/rdr2.webp">
+                                </a>
+                                <div>
+                                    <span>Red Dead Redemption II</span><br>
+                                    Rockstar Games - 2018
+                                </div>
+                            </div>
+                            <!-- need to scan game case <div class="hover4info">
+                                <a href="">
+                                    <img style="transform:rotate(1deg);" src="https://upload.wikimedia.org/wikipedia/en/b/b7/Grand_Theft_Auto_IV_cover.jpg">
+                                </a>
+                                <div>
+                                    <span>Grand Theft Auto IV</span><br>
+                                    Rockstar Games - 2008
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </span>
+                <!-- <span id="ipod">
+                    <div class="headertxt">
+                        <h3>iPodSimulator</h3>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;">
+                                https://github.com/plushexe351/iPodSimulator
+                                <iframe src="../assets/embeds/ipod/index.html" height="500px" width="290px"></iframe>
+                                <div>
+                                    <div class="box">
+                                        <p>Check out some of my favorites or songs that just hold a special place in my heart on this iPod. It's practically identical to my daily carry, but with less scratches. If you're into iPods or Walkmans, check out <abbr title="Coming soon!">my collection!</abbr></p>
+                                        <p><s>I'm not a Neocities supporter (yet), so I'm unable to upload songs to play at the moment. <i>Soon.</i></s></p>
+                                        <p>I'm a supporter now. I'm just lazy... >.></p>
+                                        <h3 style="font-size:18pt;font-style:italic;transform:rotate(-2deg);margin:0.5em -1em 0.5em;box-shadow:0 0 7px black;background-color:red;padding:0.5em;border-radius:5px;">YOU WILL OWN NOTHING AND BE HAPPY. :D</h3>
+                                        <p>It seems nearly everything nowadays is spoon-fed to you by algorithms or massive ads that take up your entire screen. Personally, I'm sick of it. On top of that, the amount of e-waste that is produced even today, a software-dominated landscape, is sickening. Many working devices will get thrown out simply because they are old or require a modicum of work. Soon, I'll have guides about how to get started.</p>
+                                        <p>Check out the links below for buying digital music or used physical media:</p>
+                                        <ul>
+                                            <a href="https://us.7digital.com/"><abbr title="Digital music store"><li>7digital (US)</li></abbr></a>
+                                            <a href="https://bandcamp.com"><abbr title="Online record store and music community, primarily for smaller artists"><li>Bandcamp</li></abbr></a>
+                                            <a href="https://www.junodownload.com/"><abbr title="Buy & download dance music"><li>Juno Download</li></abbr></a>
+                                            <a href="https://www.ebay.com/sch/i.html?_nkw=never+gonna+give+you+up+vinyl"><abbr title="It's eBay. You know what eBay is."><li>eBay</li></abbr></a>
+                                        </ul>
+                                    </div>
+                                </div>
+                    </div>
+                </span> -->
+                <span> <!-- Music Log -->
+                    <div class="headertxt">
+                        <h2 style="margin-top:2em;">Media Log</h2>
+                    </div>
+                    <div class="box">
+                        <div>
+                          <div class="logentry"> <!--Obsession-->
+                            <div class="logartwork">
+                              <a href="https://www.youtube.com/watch?v=gMC8kkwbIQQ"><img src="https://a.ltrbxd.com/resized/film-poster/1/2/3/4/4/7/2/1234472-obsession-2025-2-0-1000-0-1500-crop.jpg?v=cff6fc00b6" height="150px" width="auto"></a>
+                             </div>
+                            <div class="loginfo">
+                              <div class="logname">
+                                <span>
+                                  <p class="logtrack" style="font-size:14pt;font-weight:bold;margin:0;">Obsession</p>
+                                  <p class="logartist" style="margin-top:5px;">Curry Barker</p>
+                                </span>
+                                <div style="text-align:right;">
+                                  <p class="lograting">★★★★★</p>
+                                  <p>June 7, 2026</p>
+                                </div>
+                              </div>
+                              <div>
+                                <hr>
+                                <p style="margin-bottom:0;">An instant-classic thriller about having someone's autonomy completely ripped from them and forced into a situation they have no way of escaping. First "horror" movie in a while that felt like a movie first instead of a series of shit that's supposed to spook you.<br><br>Give this one a watch.</p>
+                              </div>
+                            </div>
+                          </div>
+                            <div class="logentry">
+                                <div class="logartwork">
+                                    <a href="https://www.youtube.com/watch?v=4tDbDw9lyHo&list=PLMfIC5Inj0_sRftDoJR0Fn-sLI7tLgfle"><img src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/a6/ad/3f/a6ad3f6d-b4ad-cf8b-0faf-e0a125d4a5ce/33a648fc5d45f7ceec9ac207a9d287aa_Preview_Image_Intermediate_nonvideo_sdr_421846650_2538275690.png/150x150.jpg" width="150px"></a>
+                                </div>
+                                <div class="loginfo">
+                                    <div class="logname">
+                                        <span>
+                                            <p class="logtrack" style="font-size:14pt;font-weight:bold;margin:0;">Everything Glows</p>
+                                            <p class="logartist" style="margin-top:5px;">Cannons - Released March 27, 2026</p>
+                                        </span>
+                                        <div style="text-align:right;">
+                                            <p class="lograting">★★★☆☆</p>
+                                            <p>March 30, 2026</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <hr>
+                                        <p style="margin-bottom:0;">I'll be seeing these guys live next week. The first half of the album has that special Cannons sauce that I can't get enough of, but the last half started to sound repetative and every track seemed to mold into each other. Carousel, my personal favorite, is super funky.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="sidebar">
+                <span> <!-- Song of the Week -->
+                    <div class="headertxt">
+                        <h3 style="margin-top:4px;">Song of the Week</h3>
+                    </div> 
+                    <div class="box" style="text-align:center;padding:1em;">
+                        <div class="weeksong">
+                            <!-- Enter YouTube link here for song-->
+                            <a href="https://www.youtube.com/watch?v=14PgWitIbSk">
+                                <!--Enter Apple Music album artwork link (if available)-->
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/81/3e/69/813e69cc-7f31-e132-b0b1-224de9ffc61e/06UMGIM22294.rgb.jpg/296x296.webp" width="124px">
+                                <div style="margin-top:8px;margin-bottom:8px;">
+                                    <!--Song name-->
+                                    <p class="weektitle">Locked Up</p>
+                                    <!--Artist name-->
+                                    <small>by Akon</small>
+                                </div>
+                            </a>
+                            <hr>
+                            <a href="https://hippiejesus.net/media/songoftheweek"><div class="xpbutton">Previous Weeks</div></a>
+                        </div>
+                    </div>
+                </span>
+                <span> <!-- Collection -->
+                    <div class="headertxt">
+                        <h3>Collection</h3>
+                    </div>
+                    <div class="box">
+                        <img src="../assets/images/ownyourmediabadge.png" style="width:75px;margin:-37.5px 0 -37.5px 0;position:relative;transform:rotate(5deg);left:90px;bottom:30px;">
+                        <p style="margin-top:0;"><b>Work-In-Progress</b></p>
+                        <p>For now, you can check out my collection on <a href="https://www.discogs.com/user/hippie_jesus/collection">discogs.com</a>.</p>
+                    </div>
+                </span>
+                <span>
+                    <div class="headertxt">
+                        <h3>Events Attended</h3>
+                    </div>
+                        <div id="concerts">
+                            <small>Hover for event info.</small>
+                            <a href="https://hippiejesus.net/photos/2026/06/bonnaroo/">
+                              <abbr title="Bonnaroo 2026 - ★★★★★">
+                                <img src="../photos/2026/06/bonnaroo/poster.webp" style="transform:rotate(-1deg);"></abbr>
+                            </a>
+                            <a href="https://hippiejesus.net/photos/2026/06/grooveandsunshine/">
+                              <abbr title="Groove & Sunshine Festival @ Ricochet Bar - ★★☆☆☆">
+                                <img src="../photos/2026/06/grooveandsunshine/poster.png" style="transform:rotate(1deg);"></abbr>
+                            </a>
+                            <a href="https://hippiejesus.net/photos/2026/05/growlers/">
+                                <abbr title="Burnt Witch, Greyhame, Global Plague, and Sibyl @ Growlers - ★★★★☆">
+                                <img src="https://hippiejesus.net/photos/2026/05/growlers/poster.jpg" style="transform:rotate(-2deg);"></abbr>
+                            </a>
+                            <abbr title="Bob Moses & Cannons @ The Pinnacle - April 7, 2026 - ★★★★★"><img src="assets/images/concerts/bobmosescannons.jpg" style="transform:rotate(1deg);"></abbr>
+                            <a href="https://hippiejesus.net/photos/2026/02/growlers/">
+                                <abbr title="Flintwick w/ Liquid L, Gill_Yum, The Depths, and Lumen @ Growlers - February 27, 2026 - ★★★★☆">
+                                <img src="https://hippiejesus.net/photos/2026/02/growlers/poster.jpg" style="transform:rotate(-1deg);"></abbr>
+                            </a>
+                            <a href="https://hippiejesus.net/photos/2025/tothefuturenye/">
+                                <abbr title="To The Future NYE @ The Nashville Fairgrounds - December 31, 2025 - ★★★★★">
+                                <img src="https://hippiejesus.net/photos/2025/tothefuturenye/nye2025.jpg" style="transform:rotate(3deg);"></abbr>
+                            </a>
+                            <abbr title="Great American Ghost, wristmeetrazor, Downswing, Saltwound and Rosary @ Growlers - December 5, 2025 - ★★★★☆">
+                                <img src="assets/images/concerts/greatamericanghost.jpg" style="transform:rotate(2deg);">
+                            </abbr>
+                            <a href="https://youtu.be/VT0l1qMeBjI">
+                                <abbr title="Aaron Lewis and the Stateliners @ Kathleen and Tom Elam Center - November 20, 2025 - ★★☆☆☆">
+                                <img src="assets/images/concerts/AaronLewis.jpg" style="transform:rotate(-1deg);"></abbr>
+                            </a>
+                            <abbr title="Panic! at the Disco @ FedEx Forum - April 8, 2017 - ★★★★★">
+                                <img src="assets/images/concerts/deathofabachelortour.jpg">
+                            </abbr>
+                        </div>
+                </span>
             </div>
         </div>
-    </body>
+    </div>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"a4ec023971494478a3e81acf89d86695","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
 </html>
